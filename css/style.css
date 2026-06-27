@@ -980,5 +980,176 @@ header {
   }
 }
 
+/* ==========================================================================
+   6. PROJECTS SECTION
+   ========================================================================== */
+.projects-section {
+  padding: var(--space-xxl) 0;
+  border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: var(--space-lg);
+}
+
+.project-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+.project-card-visual {
+  position: relative;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.project-pattern {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    hsl(var(--pattern-hue, 220), 60%, 50%) 0%,
+    hsl(var(--pattern-hue, 220), 50%, 40%) 100%);
+  opacity: 0.1;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-pattern {
+  opacity: 0.18;
+}
+
+.project-icon {
+  position: relative;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  color: var(--text-primary);
+  opacity: 0.5;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover .project-icon {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.project-number {
+  position: absolute;
+  bottom: var(--space-sm);
+  right: var(--space-md);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  opacity: 0.06;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  user-select: none;
+}
+
+.project-card-body {
+  padding: var(--space-md);
+}
+
+.project-card-body h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+  line-height: 1.35;
+}
+
+.project-card-body p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.project-tag {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  background-color: rgba(255, 255, 255, 0.03);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-subtle);
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+
+.project-tag:hover {
+  border-color: var(--border-hover);
+  background-color: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1.5px);
+}
+
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-github {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border-subtle);
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
+}
+
+.btn-github:hover {
+  border-color: var(--border-hover);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+@media (prefers-color-scheme: light) {
+  .btn-github:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  .project-tag {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+
+  .project-tag:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+@media (min-width: 576px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 
 

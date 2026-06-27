@@ -69,8 +69,10 @@ const translations = {
 
     // Projects Section
     "projects-heading": "Proyectos Destacados",
+    "projects-title-heading": "Lo que he construido",
+    "projects-subtitle": "Una selección de proyectos que demuestran mis habilidades técnicas y creativas.",
     "project-bot-title": "Bot de Delivery para Cafetería",
-    "project-bot-desc": "Simulación de un asistente automatizado para la gestión de pedidos a domicilio en una cafetería local.",
+    "project-bot-desc": "Aplicación de automatización desarrollada en n8n para la gestión de pedidos a domicilio en una cafetería local.",
     "project-ecommerce-title": "App de Ecommerce de Ropa",
     "project-ecommerce-desc": "Interfaz responsive enfocada en catálogo y visualización atractiva de artículos de moda.",
     "project-bank-title": "Sitio Web de Banco Ficticio",
@@ -81,7 +83,7 @@ const translations = {
     "project-tools-desc": "Aplicación de consola en Python para coordinar y registrar el préstamo de herramientas en un vecindario.",
     
     // Buttons inside Projects
-    "btn-github": "Código",
+    "btn-github": "Ver repositorio",
     "btn-demo": "Demo",
 
     // Contact Section
@@ -157,8 +159,10 @@ const translations = {
 
     // Projects Section
     "projects-heading": "Featured Projects",
+    "projects-title-heading": "What I've Built",
+    "projects-subtitle": "A selection of projects that showcase my technical and creative skills.",
     "project-bot-title": "Delivery Bot for a Coffee Shop",
-    "project-bot-desc": "Simulation of an automated assistant for managing home delivery orders for a local coffee shop.",
+    "project-bot-desc": "Automation application developed in n8n for managing home delivery orders for a local coffee shop.",
     "project-ecommerce-title": "Clothing E-commerce App",
     "project-ecommerce-desc": "Responsive interface focusing on Catalog and attractive visualization of fashion items.",
     "project-bank-title": "Fictional Bank Website",
@@ -169,7 +173,7 @@ const translations = {
     "project-tools-desc": "Python console application to coordinate and register tool lending in a neighborhood.",
 
     // Buttons inside Projects
-    "btn-github": "Code",
+    "btn-github": "View Repository",
     "btn-demo": "Demo",
 
     // Contact Section
