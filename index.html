@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuel David Gelvez Rodríguez | Técnico en Desarrollo de Software</title>
+  <meta name="description" content="Portafolio profesional de Samuel David Gelvez Rodríguez, Técnico en Desarrollo de Software y Desarrollador Web en Formación.">
+  
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Estilos del Portafolio -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+  <!-- Enlace de Accesibilidad para Saltar al Contenido Principal -->
+  <a href="#main-content" class="skip-link" data-i18n="skip-to-content">Saltar al contenido principal</a>
+
+  <!-- 1. STICKY NAVIGATION (Estructura inicial vacía, incluye selector de idioma) -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#hero">SGR</a>
+      </div>
+      
+      <nav id="main-nav" aria-label="Navegación Principal">
+        <ul class="nav-links">
+          <li><a href="#about" data-i18n="nav-about">Sobre Mí</a></li>
+          <li><a href="#objectives" data-i18n="nav-objectives">Objetivos</a></li>
+          <li><a href="#skills" data-i18n="nav-skills">Habilidades</a></li>
+          <li><a href="#projects" data-i18n="nav-projects">Proyectos</a></li>
+          <li><a href="#contact" data-i18n="nav-contact">Contacto</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Selector de Idioma (ES / EN) -->
+      <div class="language-selector" role="group" aria-label="Selector de idioma">
+        <button id="lang-btn-es" class="lang-btn active" aria-pressed="true">ES</button>
+        <button id="lang-btn-en" class="lang-btn" aria-pressed="false">EN</button>
+      </div>
+
+      <!-- Botón de Menú Móvil (Hamburguesa) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Contenedor del Contenido Principal -->
+  <main id="main-content">
+
+    <!-- 2. HERO SECTION -->
+    <section id="hero" class="hero-section">
+      <div class="hero-container">
+        
+        <!-- Left Side: Profile Info -->
+        <div class="hero-info">
+          <span class="hero-greeting" data-i18n="hero-greeting">Hola, soy</span>
+          <h1 class="hero-name">Samuel David Gelvez Rodríguez</h1>
+          <p class="hero-subtitle" data-i18n="hero-title">Técnico en Desarrollo de Software | Desarrollador Web en Formación</p>
+          <p class="hero-description" data-i18n="hero-description">Preparándome para mi primera oportunidad profesional, desarrollando aplicaciones eficientes y accesibles.</p>
+          
+          <!-- Technology Badges -->
+          <div class="tech-badges-container">
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">MySQL</span>
+            <span class="tech-badge">Git</span>
+            <span class="tech-badge">GitHub</span>
+            <span class="tech-badge">Linux</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary" data-i18n="hero-cta-projects">Ver Proyectos</a>
+            <a href="#contact" class="btn btn-secondary" data-i18n="hero-cta-contact">Contactar</a>
+          </div>
+        </div>
+
+        <!-- Right Side: Circular Avatar -->
+        <div class="hero-visual">
+          <div class="avatar-ring">
+            <img src="./assets/images/profile/avatar.jpg" alt="Samuel David Gelvez Rodríguez" class="hero-avatar" loading="eager">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. ABOUT ME SECTION -->
+    <section id="about" class="about-section reveal" aria-labelledby="about-title">
+      <div class="section-container">
+        <span class="section-tagline" data-i18n="about-heading">Sobre Mí</span>
+        <h2 id="about-title" class="section-heading" data-i18n="about-title">Diseñando soluciones desde el código</h2>
+        
+        <div class="about-grid">
+          <!-- Text Introduction -->
+          <div class="about-text-column">
+            <p class="about-lead-p" data-i18n="about-p1">Soy Técnico en Desarrollo de Software con un fuerte interés por el desarrollo Full Stack...</p>
+          </div>
+
+          <!-- Cards Column -->
+          <div class="about-cards-column">
+            
+            <!-- Card 1: Formación -->
+            <div class="info-card">
+              <div class="card-header">
+                <i data-lucide="graduation-cap" class="card-icon" aria-hidden="true"></i>
+                <h3 data-i18n="about-card-education-title">Formación</h3>
+              </div>
+              <div class="card-body">
+                <div class="education-item">
+                  <h4 data-i18n="about-card-education-subtitle1">Técnico en Desarrollo</h4>
+                  <p class="edu-place" data-i18n="about-card-education-place1">Campuslands (Floridablanca, 2026)</p>
+                </div>
+                <div class="education-item">
+                  <h4 data-i18n="about-card-education-subtitle2">Bachiller</h4>
+                  <p class="edu-place" data-i18n="about-card-education-place2">IPS Piedecuesta (2025)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: Destrezas Personales -->
+            <div class="info-card">
+              <div class="card-header">
+                <i data-lucide="sparkles" class="card-icon" aria-hidden="true"></i>
+                <h3 data-i18n="about-card-skills-title">Destrezas</h3>
+              </div>
+              <div class="card-body">
+                <p class="skills-highlight" data-i18n="about-card-skills-list">Empatía • Disciplina • Creatividad • Adaptabilidad • Responsabilidad</p>
+              </div>
+            </div>
+
+            <!-- Card 3: Idiomas -->
+            <div class="info-card">
+              <div class="card-header">
+                <i data-lucide="languages" class="card-icon" aria-hidden="true"></i>
+                <h3 data-i18n="about-card-languages-title">Idiomas</h3>
+              </div>
+              <div class="card-body">
+                <ul class="languages-list">
+                  <li data-i18n="about-card-languages-list1">Español: Nativo</li>
+                  <li data-i18n="about-card-languages-list2">Inglés: A2</li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OBJECTIVES SECTION -->
+    <section id="objectives" class="objectives-section reveal" aria-labelledby="objectives-title">
+      <div class="section-container">
+        <span class="section-tagline" data-i18n="objectives-heading">Objetivos</span>
+        <h2 id="objectives-title" class="section-heading" data-i18n="objectives-title">Proyección de Crecimiento</h2>
+        <p class="section-desc" data-i18n="objectives-subtitle">Mi camino hacia la madurez técnica y el desarrollo profesional.</p>
+        
+        <div class="objectives-grid">
+          
+          <!-- Card 1: Corto Plazo -->
+          <div class="objective-card">
+            <div class="obj-header">
+              <div class="obj-icon-wrapper">
+                <i data-lucide="target" class="obj-icon" aria-hidden="true"></i>
+              </div>
+              <h3 data-i18n="objectives-short-title">Corto Plazo</h3>
+            </div>
+            <p class="obj-desc" data-i18n="objectives-short-desc">Obtener mi primer rol profesional...</p>
+          </div>
+
+          <!-- Card 2: Mediano Plazo -->
+          <div class="objective-card">
+            <div class="obj-header">
+              <div class="obj-icon-wrapper">
+                <i data-lucide="trending-up" class="obj-icon" aria-hidden="true"></i>
+              </div>
+              <h3 data-i18n="objectives-medium-title">Mediano Plazo</h3>
+            </div>
+            <p class="obj-desc" data-i18n="objectives-medium-desc">Consolidarme como desarrollador Full Stack...</p>
+          </div>
+
+          <!-- Card 3: Largo Plazo -->
+          <div class="objective-card">
+            <div class="obj-header">
+              <div class="obj-icon-wrapper">
+                <i data-lucide="award" class="obj-icon" aria-hidden="true"></i>
+              </div>
+              <h3 data-i18n="objectives-long-title">Largo Plazo</h3>
+            </div>
+            <p class="obj-desc" data-i18n="objectives-long-desc">Liderar arquitecturas de sistemas...</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SKILLS SECTION -->
+    <section id="skills" class="skills-section reveal" aria-labelledby="skills-title">
+      <div class="section-container">
+        <span class="section-tagline" data-i18n="skills-heading">Habilidades & Herramientas</span>
+        <h2 id="skills-title" class="section-heading" data-i18n="skills-title-heading">Stack Técnico</h2>
+        <p class="section-desc" data-i18n="skills-subtitle">Tecnologías y herramientas con las que trabajo día a día.</p>
+        
+        <div class="skills-grid">
+          <!-- Frontend -->
+          <div class="skills-category">
+            <div class="category-header">
+              <i data-lucide="layout" class="category-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-frontend">Frontend</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">HTML5</li>
+              <li class="skill-item">CSS3</li>
+              <li class="skill-item">JavaScript</li>
+            </ul>
+          </div>
+
+          <!-- Programación -->
+          <div class="skills-category">
+            <div class="category-header">
+              <i data-lucide="code-2" class="category-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-programming">Programación</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">Python</li>
+              <li class="skill-item">JavaScript</li>
+            </ul>
+          </div>
+
+          <!-- Base de Datos -->
+          <div class="skills-category">
+            <div class="category-header">
+              <i data-lucide="database" class="category-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-database">Base de Datos</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">MySQL</li>
+            </ul>
+          </div>
+
+          <!-- Herramientas -->
+          <div class="skills-category">
+            <div class="category-header">
+              <i data-lucide="wrench" class="category-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-tools">Herramientas</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item">Git</li>
+              <li class="skill-item">GitHub</li>
+              <li class="skill-item">VS Code</li>
+              <li class="skill-item">Linux</li>
+            </ul>
+          </div>
+
+          <!-- Destrezas Personales -->
+          <div class="skills-category">
+            <div class="category-header">
+              <i data-lucide="heart-handshake" class="category-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-soft">Destrezas Personales</h3>
+            </div>
+            <ul class="skills-list">
+              <li class="skill-item" data-i18n="skill-empathy">Empatía</li>
+              <li class="skill-item" data-i18n="skill-discipline">Disciplina</li>
+              <li class="skill-item" data-i18n="skill-creativity">Creatividad</li>
+              <li class="skill-item" data-i18n="skill-adaptability">Adaptabilidad</li>
+              <li class="skill-item" data-i18n="skill-responsibility">Responsabilidad</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. FEATURED PROJECTS SECTION -->
+    <section id="projects" class="projects-section reveal" aria-labelledby="projects-title">
+      <div class="section-container">
+        <span class="section-tagline" data-i18n="projects-heading">Proyectos Destacados</span>
+        <h2 id="projects-title" class="section-heading" data-i18n="projects-title-heading">Lo que he construido</h2>
+        <p class="section-desc" data-i18n="projects-subtitle">Una selección de proyectos que demuestran mis habilidades técnicas y creativas.</p>
+
+        <div class="projects-grid">
+
+          <!-- Proyecto 1: Bot de Delivery -->
+          <article class="project-card">
+            <div class="project-card-visual">
+              <div class="project-pattern" style="--pattern-hue: 220;"></div>
+              <span class="project-number">01</span>
+            </div>
+            <div class="project-card-body">
+              <h3 data-i18n="project-bot-title">Bot de Delivery para Cafetería</h3>
+              <p data-i18n="project-bot-desc">Simulación de un asistente automatizado para la gestión de pedidos a domicilio en una cafetería local.</p>
+              <div class="project-tech">
+                <span class="project-tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver código en GitHub">
+                  <i data-lucide="github" aria-hidden="true"></i>
+                  <span data-i18n="btn-github">Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: E-commerce -->
+          <article class="project-card">
+            <div class="project-card-visual">
+              <div class="project-pattern" style="--pattern-hue: 280;"></div>
+              <span class="project-number">02</span>
+            </div>
+            <div class="project-card-body">
+              <h3 data-i18n="project-ecommerce-title">App de Ecommerce de Ropa</h3>
+              <p data-i18n="project-ecommerce-desc">Interfaz responsive enfocada en catálogo y visualización atractiva de artículos de moda.</p>
+              <div class="project-tech">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+                <span class="project-tag">JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver código en GitHub">
+                  <i data-lucide="github" aria-hidden="true"></i>
+                  <span data-i18n="btn-github">Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Banco Ficticio -->
+          <article class="project-card">
+            <div class="project-card-visual">
+              <div class="project-pattern" style="--pattern-hue: 160;"></div>
+              <span class="project-number">03</span>
+            </div>
+            <div class="project-card-body">
+              <h3 data-i18n="project-bank-title">Sitio Web de Banco Ficticio</h3>
+              <p data-i18n="project-bank-desc">Maquetación estática de una sucursal bancaria virtual para experimentar con interfaces financieras limpias.</p>
+              <div class="project-tech">
+                <span class="project-tag">HTML5</span>
+                <span class="project-tag">CSS3</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver código en GitHub">
+                  <i data-lucide="github" aria-hidden="true"></i>
+                  <span data-i18n="btn-github">Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: Pizzería MySQL -->
+          <article class="project-card">
+            <div class="project-card-visual">
+              <div class="project-pattern" style="--pattern-hue: 30;"></div>
+              <span class="project-number">04</span>
+            </div>
+            <div class="project-card-body">
+              <h3 data-i18n="project-pizzeria-title">Base de Datos MySQL para Pizzería</h3>
+              <p data-i18n="project-pizzeria-desc">Modelado de base de datos relacional orientada al control de ingredientes, ventas y pedidos.</p>
+              <div class="project-tech">
+                <span class="project-tag">MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver código en GitHub">
+                  <i data-lucide="github" aria-hidden="true"></i>
+                  <span data-i18n="btn-github">Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Proyecto 5: Préstamo Herramientas -->
+          <article class="project-card">
+            <div class="project-card-visual">
+              <div class="project-pattern" style="--pattern-hue: 340;"></div>
+              <span class="project-number">05</span>
+            </div>
+            <div class="project-card-body">
+              <h3 data-i18n="project-tools-title">Sistema de Préstamo de Herramientas Vecinal</h3>
+              <p data-i18n="project-tools-desc">Aplicación de consola en Python para coordinar y registrar el préstamo de herramientas en un vecindario.</p>
+              <div class="project-tech">
+                <span class="project-tag">Python</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver código en GitHub">
+                  <i data-lucide="github" aria-hidden="true"></i>
+                  <span data-i18n="btn-github">Código</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="contact-section reveal" aria-labelledby="contact-title">
+      <div class="section-container">
+        <span class="section-tagline" data-i18n="contact-heading">Contacto</span>
+        <h2 id="contact-title" class="section-heading" data-i18n="contact-title-heading">¿Preparado para trabajar juntos?</h2>
+        <p class="section-desc" data-i18n="contact-p">Actualmente me encuentro en busca de proyectos y de mi primera oportunidad laboral. Si tienes una propuesta o quieres conversar, no dudes en escribirme.</p>
+        
+        <div class="contact-methods">
+          <a href="mailto:samueldavidgr2007@gmail.com" class="contact-card" aria-label="Enviar correo electrónico">
+            <div class="contact-icon-wrapper">
+              <i data-lucide="mail" class="contact-icon" aria-hidden="true"></i>
+            </div>
+            <div class="contact-card-info">
+              <h3>Email</h3>
+              <span>samueldavidgr2007@gmail.com</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://github.com/SamuelGelvez" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Ver perfil de GitHub">
+            <div class="contact-icon-wrapper">
+              <i data-lucide="github" class="contact-icon" aria-hidden="true"></i>
+            </div>
+            <div class="contact-card-info">
+              <h3>GitHub</h3>
+              <span>SamuelGelvez</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
+          </a>
+
+          <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Ver perfil de LinkedIn">
+            <div class="contact-icon-wrapper">
+              <i data-lucide="linkedin" class="contact-icon" aria-hidden="true"></i>
+            </div>
+            <div class="contact-card-info">
+              <h3>LinkedIn</h3>
+              <span>Samuel David Gelvez Rodríguez</span>
+            </div>
+            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="contact-actions">
+          <a href="#" class="btn btn-primary btn-cv-download">
+            <i data-lucide="download" aria-hidden="true"></i>
+            <span data-i18n="contact-cv-download">Descargar CV</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 8. FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#hero" class="footer-logo">SGR</a>
+          <p class="footer-tagline" data-i18n="footer-text">Diseñado y desarrollado por Samuel David Gelvez Rodríguez.</p>
+        </div>
+        <div class="footer-nav">
+          <a href="#about" data-i18n="nav-about">Sobre Mí</a>
+          <a href="#skills" data-i18n="nav-skills">Habilidades</a>
+          <a href="#projects" data-i18n="nav-projects">Proyectos</a>
+          <a href="#contact" data-i18n="nav-contact">Contacto</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Samuel David Gelvez Rodríguez</p>
+        <a href="#hero" class="back-to-top" aria-label="Volver arriba">
+          <i data-lucide="arrow-up" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Iconos Lucide (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Scripts del Portafolio -->
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
