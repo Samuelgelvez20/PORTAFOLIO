@@ -60,7 +60,7 @@
         <div class="hero-info">
           <span class="hero-greeting" data-i18n="hero-greeting">Hola, soy</span>
           <h1 class="hero-name">Samuel David Gelvez Rodríguez</h1>
-          <p class="hero-subtitle" data-i18n="hero-title">Técnico en Desarrollo de Software | Desarrollador Web en Formación</p>
+          <p class="hero-subtitle" data-i18n="hero-title">Técnico en Desarrollo de Software | Desarrollador Full-Stack en Formación</p>
           <p class="hero-description" data-i18n="hero-description">Preparándome para mi primera oportunidad profesional, desarrollando aplicaciones eficientes y accesibles.</p>
           
           <!-- Technology Badges -->
@@ -108,7 +108,7 @@
             
             <!-- Card 1: Formación -->
             <div class="info-card">
-              <div class="card-header">
+              <div class="card-header" aria-hidden="true">
                 <i data-lucide="graduation-cap" class="card-icon" aria-hidden="true"></i>
                 <h3 data-i18n="about-card-education-title">Formación</h3>
               </div>
@@ -126,7 +126,7 @@
 
             <!-- Card 2: Destrezas Personales -->
             <div class="info-card">
-              <div class="card-header">
+              <div class="card-header" aria-hidden="true">
                 <i data-lucide="sparkles" class="card-icon" aria-hidden="true"></i>
                 <h3 data-i18n="about-card-skills-title">Destrezas</h3>
               </div>
@@ -137,7 +137,7 @@
 
             <!-- Card 3: Idiomas -->
             <div class="info-card">
-              <div class="card-header">
+              <div class="card-header" aria-hidden="true">
                 <i data-lucide="languages" class="card-icon" aria-hidden="true"></i>
                 <h3 data-i18n="about-card-languages-title">Idiomas</h3>
               </div>
@@ -209,70 +209,86 @@
         
         <div class="skills-grid">
           <!-- Frontend -->
-          <div class="skills-category">
-            <div class="category-header">
-              <i data-lucide="layout" class="category-icon" aria-hidden="true"></i>
-              <h3 data-i18n="skills-frontend">Frontend</h3>
+          <article class="skills-card">
+            <div class="skills-card-header">
+              <i data-lucide="layout" class="skills-card-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-frontend-title">Frontend</h3>
             </div>
-            <ul class="skills-list">
-              <li class="skill-item">HTML5</li>
-              <li class="skill-item">CSS3</li>
-              <li class="skill-item">JavaScript</li>
-            </ul>
-          </div>
+            <p class="skills-card-desc" data-i18n="skills-frontend-desc">Desarrollo interfaces web modernas, responsivas y accesibles.</p>
+            <div class="skills-badges">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </article>
 
           <!-- Programación -->
-          <div class="skills-category">
-            <div class="category-header">
-              <i data-lucide="code-2" class="category-icon" aria-hidden="true"></i>
-              <h3 data-i18n="skills-programming">Programación</h3>
+          <article class="skills-card">
+            <div class="skills-card-header">
+              <i data-lucide="code-2" class="skills-card-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-programming-title">Programación</h3>
             </div>
-            <ul class="skills-list">
-              <li class="skill-item">Python</li>
-              <li class="skill-item">JavaScript</li>
-            </ul>
-          </div>
+            <p class="skills-card-desc" data-i18n="skills-programming-desc">Construcción de lógica backend, scripts y soluciones estructuradas en lenguajes de propósito general.</p>
+            <div class="skills-badges">
+              <span class="skill-badge">Python</span>
+              <span class="skill-badge">JavaScript</span>
+            </div>
+          </article>
 
           <!-- Base de Datos -->
-          <div class="skills-category">
-            <div class="category-header">
-              <i data-lucide="database" class="category-icon" aria-hidden="true"></i>
-              <h3 data-i18n="skills-database">Base de Datos</h3>
+          <article class="skills-card">
+            <div class="skills-card-header">
+              <i data-lucide="database" class="skills-card-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-database-title">Base de Datos</h3>
             </div>
-            <ul class="skills-list">
-              <li class="skill-item">MySQL</li>
-            </ul>
-          </div>
+            <p class="skills-card-desc" data-i18n="skills-database-desc">Modelado, diseño y organización de datos en motores relacionales.</p>
+            <div class="skills-badges">
+              <span class="skill-badge">MySQL</span>
+            </div>
+          </article>
 
           <!-- Herramientas -->
-          <div class="skills-category">
-            <div class="category-header">
-              <i data-lucide="wrench" class="category-icon" aria-hidden="true"></i>
-              <h3 data-i18n="skills-tools">Herramientas</h3>
+          <article class="skills-card">
+            <div class="skills-card-header">
+              <i data-lucide="wrench" class="skills-card-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-tools-title">Herramientas</h3>
             </div>
-            <ul class="skills-list">
-              <li class="skill-item">Git</li>
-              <li class="skill-item">GitHub</li>
-              <li class="skill-item">VS Code</li>
-              <li class="skill-item">Linux</li>
-              <li class="skill-item">n8n</li>
-            </ul>
-          </div>
+            <p class="skills-card-desc" data-i18n="skills-tools-desc">Control de versiones, utilidades de editor de código y terminal Linux.</p>
+            <div class="skills-badges">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">VS Code</span>
+              <span class="skill-badge">Linux</span>
+            </div>
+          </article>
+
+          <!-- Automatizaciones -->
+          <article class="skills-card">
+            <div class="skills-card-header">
+              <i data-lucide="workflow" class="skills-card-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-automation-title">Automatizaciones</h3>
+            </div>
+            <p class="skills-card-desc" data-i18n="skills-automation-desc">Automatización de procesos, integraciones entre servicios, flujos de trabajo y asistentes automatizados mediante n8n.</p>
+            <div class="skills-badges">
+              <span class="skill-badge">n8n</span>
+            </div>
+          </article>
 
           <!-- Destrezas Personales -->
-          <div class="skills-category">
-            <div class="category-header">
-              <i data-lucide="heart-handshake" class="category-icon" aria-hidden="true"></i>
-              <h3 data-i18n="skills-soft">Destrezas Personales</h3>
+          <article class="skills-card">
+            <div class="skills-card-header">
+              <i data-lucide="heart-handshake" class="skills-card-icon" aria-hidden="true"></i>
+              <h3 data-i18n="skills-soft-title">Destrezas Personales</h3>
             </div>
-            <ul class="skills-list">
-              <li class="skill-item" data-i18n="skill-empathy">Empatía</li>
-              <li class="skill-item" data-i18n="skill-discipline">Disciplina</li>
-              <li class="skill-item" data-i18n="skill-creativity">Creatividad</li>
-              <li class="skill-item" data-i18n="skill-adaptability">Adaptabilidad</li>
-              <li class="skill-item" data-i18n="skill-responsibility">Responsabilidad</li>
-            </ul>
-          </div>
+            <p class="skills-card-desc" data-i18n="skills-soft-desc">Cualidades personales y de comunicación para la colaboración efectiva.</p>
+            <div class="skills-badges">
+              <span class="skill-badge" data-i18n="soft-badge-team">Trabajo en equipo</span>
+              <span class="skill-badge" data-i18n="soft-badge-comm">Comunicación</span>
+              <span class="skill-badge" data-i18n="soft-badge-responsibility">Responsabilidad</span>
+              <span class="skill-badge" data-i18n="soft-badge-learning">Aprendizaje continuo</span>
+              <span class="skill-badge" data-i18n="soft-badge-problem">Resolución de problemas</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
@@ -412,38 +428,47 @@
         <p class="section-desc" data-i18n="contact-p">Actualmente me encuentro en busca de proyectos y de mi primera oportunidad laboral. Si tienes una propuesta o quieres conversar, no dudes en escribirme.</p>
         
         <div class="contact-methods">
-          <a href="mailto:samueldavidgr2007@gmail.com" class="contact-card" aria-label="Enviar correo electrónico">
-            <div class="contact-icon-wrapper">
-              <i data-lucide="mail" class="contact-icon" aria-hidden="true"></i>
+          <div class="contact-card">
+            <div class="contact-card-body">
+              <div class="contact-card-icon-wrap">
+                <i data-lucide="mail" class="contact-card-icon" aria-hidden="true"></i>
+              </div>
+              <h3 class="contact-card-title">Email</h3>
+              <p class="contact-card-text">samueldavidgr2007@gmail.com</p>
             </div>
-            <div class="contact-card-info">
-              <h3>Email</h3>
-              <span>samueldavidgr2007@gmail.com</span>
-            </div>
-            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
-          </a>
+            <a href="mailto:samueldavidgr2007@gmail.com" class="btn btn-secondary contact-card-btn" data-i18n="contact-email-btn">
+              Enviar correo
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
 
-          <a href="https://github.com/SamuelGelvez" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Ver perfil de GitHub">
-            <div class="contact-icon-wrapper">
-              <i data-lucide="github" class="contact-icon" aria-hidden="true"></i>
+          <div class="contact-card">
+            <div class="contact-card-body">
+              <div class="contact-card-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+              </div>
+              <h3 class="contact-card-title">GitHub</h3>
+              <p class="contact-card-text">SamuelGelvez</p>
             </div>
-            <div class="contact-card-info">
-              <h3>GitHub</h3>
-              <span>SamuelGelvez</span>
-            </div>
-            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
-          </a>
+            <a href="https://github.com/SamuelGelvez" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-card-btn" data-i18n="contact-github-btn">
+              Ver perfil
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
 
-          <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="contact-card" aria-label="Ver perfil de LinkedIn">
-            <div class="contact-icon-wrapper">
-              <i data-lucide="linkedin" class="contact-icon" aria-hidden="true"></i>
+          <div class="contact-card">
+            <div class="contact-card-body">
+              <div class="contact-card-icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
+              </div>
+              <h3 class="contact-card-title">LinkedIn</h3>
+              <p class="contact-card-text">Samuel David Gelvez Rodríguez</p>
             </div>
-            <div class="contact-card-info">
-              <h3>LinkedIn</h3>
-              <span>Samuel David Gelvez Rodríguez</span>
-            </div>
-            <i data-lucide="arrow-up-right" class="contact-arrow" aria-hidden="true"></i>
-          </a>
+            <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-card-btn" data-i18n="contact-linkedin-btn">
+              Ver perfil
+              <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+            </a>
+          </div>
         </div>
 
         <div class="contact-actions">
@@ -470,6 +495,14 @@
           <a href="#skills" data-i18n="nav-skills">Habilidades</a>
           <a href="#projects" data-i18n="nav-projects">Proyectos</a>
           <a href="#contact" data-i18n="nav-contact">Contacto</a>
+        </div>
+        <div class="footer-social">
+          <a href="https://github.com/SamuelGelvez" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+          </a>
+          <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
+          </a>
         </div>
       </div>
       <div class="footer-bottom">

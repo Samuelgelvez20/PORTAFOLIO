@@ -48,24 +48,31 @@ const translations = {
 
     // Skills Section
     "skills-heading": "Habilidades",
-    "skills-title": "Mi Stack Tecnológico",
+    "skills-title": "Stack Técnico",
+    "skills-title-heading": "Stack Técnico",
+    "skills-subtitle": "Tecnologías y herramientas con las que trabajo día a día.",
     "skills-frontend-title": "Frontend",
     "skills-frontend-desc": "Desarrollo interfaces web modernas, responsivas y accesibles.",
     "skills-backend-title": "Backend",
     "skills-backend-desc": "Desarrollo de lógica de servidor y estructuración lógica de programas.",
+    "skills-programming-title": "Programación",
+    "skills-programming-desc": "Construcción de lógica backend, scripts y soluciones estructuradas en lenguajes de propósito general.",
     "skills-database-title": "Bases de Datos",
     "skills-database-desc": "Modelado, diseño y organización de datos en motores relacionales.",
     "skills-tools-title": "Herramientas",
     "skills-tools-desc": "Control de versiones, utilidades de editor de código y terminal Linux.",
+    "skills-automation-title": "Automatizaciones",
+    "skills-automation-desc": "Automatización de procesos, integraciones entre servicios, flujos de trabajo y asistentes automatizados mediante n8n.",
     "skills-learning-title": "Actualmente Aprendiendo",
     "skills-learning-desc": "Ampliando mis conocimientos en el ecosistema JavaScript moderno.",
-    "skills-soft-title": "Habilidades Blandas",
+    "skills-soft-title": "Destrezas Personales",
     "skills-soft-desc": "Cualidades personales y de comunicación para la colaboración efectiva.",
     "soft-badge-team": "Trabajo en equipo",
     "soft-badge-comm": "Comunicación",
     "soft-badge-problem": "Resolución de problemas",
     "soft-badge-learning": "Aprendizaje continuo",
     "soft-badge-adapt": "Adaptabilidad",
+    "soft-badge-responsibility": "Responsabilidad",
 
     // Projects Section
     "projects-heading": "Proyectos Destacados",
@@ -88,8 +95,12 @@ const translations = {
 
     // Contact Section
     "contact-heading": "Contacto",
+    "contact-title-heading": "¿Preparado para trabajar juntos?",
     "contact-subtitle": "¿Preparado para trabajar juntos?",
     "contact-p": "Actualmente me encuentro en busca de proyectos y de mi primera oportunidad laboral. Si tienes una propuesta o quieres conversar, no dudes en escribirme.",
+    "contact-email-btn": "Enviar correo",
+    "contact-github-btn": "Ver perfil",
+    "contact-linkedin-btn": "Ver perfil",
     "contact-cv-download": "Descargar CV",
 
     // Footer
@@ -138,15 +149,21 @@ const translations = {
 
     // Skills Section
     "skills-heading": "Skills",
-    "skills-title": "My Tech Stack",
+    "skills-title": "Tech Stack",
+    "skills-title-heading": "Tech Stack",
+    "skills-subtitle": "Technologies and tools I work with every day.",
     "skills-frontend-title": "Frontend",
     "skills-frontend-desc": "Building modern, responsive, and accessible web user interfaces.",
     "skills-backend-title": "Backend",
     "skills-backend-desc": "Developing server logic and structured program architectures.",
+    "skills-programming-title": "Programming",
+    "skills-programming-desc": "Building backend logic, scripts, and structured solutions in general-purpose languages.",
     "skills-database-title": "Databases",
     "skills-database-desc": "Modeling, designing, and organizing data in relational engines.",
     "skills-tools-title": "Tools",
     "skills-tools-desc": "Version control, code editor utilities, and Linux terminal command line.",
+    "skills-automation-title": "Automation",
+    "skills-automation-desc": "Process automation, service integrations, workflows, and automated assistants using n8n.",
     "skills-learning-title": "Currently Learning",
     "skills-learning-desc": "Expanding my knowledge in the modern JavaScript ecosystem.",
     "skills-soft-title": "Soft Skills",
@@ -156,6 +173,7 @@ const translations = {
     "soft-badge-problem": "Problem Solving",
     "soft-badge-learning": "Continuous Learning",
     "soft-badge-adapt": "Adaptability",
+    "soft-badge-responsibility": "Responsibility",
 
     // Projects Section
     "projects-heading": "Featured Projects",
@@ -178,8 +196,12 @@ const translations = {
 
     // Contact Section
     "contact-heading": "Contact",
+    "contact-title-heading": "Ready to work together?",
     "contact-subtitle": "Ready to work together?",
     "contact-p": "I am currently looking for projects and my first job opportunity. If you have a proposal or want to chat, feel free to drop me a line.",
+    "contact-email-btn": "Send Email",
+    "contact-github-btn": "View Profile",
+    "contact-linkedin-btn": "View Profile",
     "contact-cv-download": "Download CV",
 
     // Footer

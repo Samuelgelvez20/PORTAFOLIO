@@ -248,6 +248,7 @@ header {
   color: var(--text-primary);
   letter-spacing: -0.03em;
   background: var(--accent-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -693,7 +694,6 @@ header {
 
 .card-header {
   display: flex;
-  aria-hidden: true;
   align-items: center;
   gap: 0.75rem;
   margin-bottom: var(--space-sm);
@@ -891,28 +891,30 @@ header {
 }
 
 .skills-card:hover {
-  border-color: var(--border-hover);
-  transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--accent-violet);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(110, 0, 245, 0.15);
 }
 
 .skills-card-header {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
   margin-bottom: var(--space-sm);
+  width: 100%;
 }
 
 .skills-card-icon {
-  width: 22px;
-  height: 22px;
+  width: 28px;
+  height: 28px;
   color: var(--accent-blue);
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .skills-card:hover .skills-card-icon {
   color: var(--accent-violet);
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .skills-card-header h3 {
@@ -1151,5 +1153,250 @@ header {
   }
 }
 
+/* ==========================================================================
+   7. CONTACT SECTION
+   ========================================================================== */
+.contact-section {
+  padding: var(--space-xxl) 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: var(--space-lg);
+}
+
+.contact-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  text-decoration: none;
+}
+
+.contact-card:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+.contact-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.contact-card-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--accent-blue);
+  transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  margin-bottom: var(--space-xs);
+}
+
+.contact-card:hover .contact-card-icon-wrap {
+  color: #ffffff;
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  transform: scale(1.05);
+}
+
+.contact-card-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.contact-card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.contact-card-text {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.contact-card-btn {
+  width: 100%;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  padding: 0.6rem 1.2rem;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+.btn-cv-download {
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .contact-methods {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ==========================================================================
+   8. FOOTER
+   ========================================================================== */
+footer {
+  border-top: 1px solid var(--border-subtle);
+  background-color: var(--bg-secondary);
+}
+
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: var(--space-xl) var(--space-md) var(--space-lg);
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.footer-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--accent-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.03em;
+}
+
+.footer-tagline {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.footer-nav a {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--text-primary);
+}
+
+.footer-social {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.footer-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.footer-social a:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.back-to-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.back-to-top:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.back-to-top svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 767px) {
+  .footer-top {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
 
 
