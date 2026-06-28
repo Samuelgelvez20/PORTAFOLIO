@@ -15,7 +15,7 @@ const translations = {
     
     // Hero Section
     "hero-greeting": "Hola, soy",
-    "hero-title": "Técnico en Desarrollo de Software | Desarrollador Web en Formación",
+    "hero-title": "Técnico en Desarrollo de Software | Desarrollador Full-Stack en Formación",
     "hero-description": "Preparándome para mi primera oportunidad profesional, desarrollando aplicaciones eficientes y accesibles.",
     "hero-cta-projects": "Ver Proyectos",
     "hero-cta-contact": "Contactar",
@@ -33,7 +33,7 @@ const translations = {
     "about-card-skills-list": "Empatía • Disciplina • Creatividad • Adaptabilidad • Responsabilidad",
     "about-card-languages-title": "Idiomas",
     "about-card-languages-list1": "Español — Nativo",
-    "about-card-languages-list2": "Inglés — A2",
+    "about-card-languages-list2": "Inglés — B1",
     
     // Objectives Section
     "objectives-heading": "Objetivos",
@@ -116,7 +116,7 @@ const translations = {
 
     // Hero Section
     "hero-greeting": "Hi, I am",
-    "hero-title": "Software Development Technician | Web Developer in Training",
+    "hero-title": "Software Development Technician | Full-Stack Developer in Training",
     "hero-description": "Preparing for my first professional opportunity, building efficient and accessible web applications.",
     "hero-cta-projects": "View Projects",
     "hero-cta-contact": "Contact Me",
@@ -134,7 +134,7 @@ const translations = {
     "about-card-skills-list": "Empathy • Discipline • Creativity • Adaptability • Responsibility",
     "about-card-languages-title": "Languages",
     "about-card-languages-list1": "Spanish — Native",
-    "about-card-languages-list2": "English — A2",
+    "about-card-languages-list2": "English — B1",
 
     // Objectives Section
     "objectives-heading": "Objectives",
