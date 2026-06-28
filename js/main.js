@@ -229,6 +229,14 @@ function applyTranslations(lang) {
       }
     }
   });
+  const cvButton = document.getElementById("cv-download");
+
+  if (cvButton) {
+    cvButton.href =
+      currentLanguage === "en"
+        ? "cv/CV_SAMUELGELVEZ_ENGLISH.pdf"
+        : "cv/CV_SAMUELGELVEZ.pdf";
+  }
 
   // Actualizar el atributo lang del HTML para SEO y lectores de pantalla
   document.documentElement.setAttribute("lang", lang);
