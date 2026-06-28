@@ -75,7 +75,6 @@ body {
   font-size: var(--font-size-base);
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  overflow-x: hidden;
 }
 
 /* Remove list styles on ul, ol elements */
@@ -225,10 +224,17 @@ header {
   z-index: 1000;
   width: 100%;
   background-color: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
   border-bottom: 1px solid var(--border-subtle);
   transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  z-index: -1;
 }
 
 .nav-container {
@@ -396,7 +402,7 @@ header {
     height: 100vh;
     background-color: var(--bg-secondary);
     border-left: 1px solid var(--border-subtle);
-    padding: 90px var(--space-lg) var(--space-lg) var(--space-lg);
+    padding: 90px var(--space-lg) var(--space-lg);
     z-index: 1000;
     transition: right 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }

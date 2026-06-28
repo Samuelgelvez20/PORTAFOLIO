@@ -51,7 +51,7 @@
   <header>
     <div class="nav-container">
       <div class="logo">
-        <a href="#hero">SGR</a>
+        <a href="#hero" aria-label="Ir al inicio">SGR</a>
       </div>
       
       <nav id="main-nav" aria-label="Navegación Principal">
@@ -81,18 +81,18 @@
   <main id="main-content">
 
     <!-- 2. HERO SECTION -->
-    <section id="hero" class="hero-section">
+    <section id="hero" class="hero-section" aria-labelledby="hero-heading">
       <div class="hero-container">
         
         <!-- Left Side: Profile Info -->
         <div class="hero-info">
           <span class="hero-greeting" data-i18n="hero-greeting">Hola, soy</span>
-          <h1 class="hero-name">Samuel David Gelvez Rodríguez</h1>
+          <h1 id="hero-heading" class="hero-name">Samuel David Gelvez Rodríguez</h1>
           <p class="hero-subtitle" data-i18n="hero-title">Técnico en Desarrollo de Software | Desarrollador Full-Stack en Formación</p>
           <p class="hero-description" data-i18n="hero-description">Preparándome para mi primera oportunidad profesional, desarrollando aplicaciones eficientes y accesibles.</p>
           
           <!-- Technology Badges -->
-          <div class="tech-badges-container">
+          <div class="tech-badges-container" aria-label="Tecnologías destacadas">
             <span class="tech-badge">HTML5</span>
             <span class="tech-badge">CSS3</span>
             <span class="tech-badge">JavaScript</span>
@@ -138,8 +138,8 @@
             
             <!-- Card 1: Formación -->
             <div class="info-card">
-              <div class="card-header" aria-hidden="true">
-                <i data-lucide="graduation-cap" class="card-icon" aria-hidden="true"></i>
+              <div class="card-header" aria-hidden="true" aria-hidden="true">
+                <i data-lucide="graduation-cap" class="card-icon"></i>
                 <h3 data-i18n="about-card-education-title">Formación</h3>
               </div>
               <div class="card-body">
@@ -245,7 +245,7 @@
               <h3 data-i18n="skills-frontend-title">Frontend</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-frontend-desc">Desarrollo interfaces web modernas, responsivas y accesibles.</p>
-            <div class="skills-badges">
+            <div class="skills-badges" aria-label="Tecnologías de frontend">
               <span class="skill-badge">HTML5</span>
               <span class="skill-badge">CSS3</span>
               <span class="skill-badge">JavaScript</span>
@@ -259,7 +259,7 @@
               <h3 data-i18n="skills-programming-title">Programación</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-programming-desc">Construcción de lógica backend, scripts y soluciones estructuradas en lenguajes de propósito general.</p>
-            <div class="skills-badges">
+            <div class="skills-badges" aria-label="Lenguajes de programación">
               <span class="skill-badge">Python</span>
               <span class="skill-badge">JavaScript</span>
             </div>
@@ -272,7 +272,7 @@
               <h3 data-i18n="skills-database-title">Base de Datos</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-database-desc">Modelado, diseño y organización de datos en motores relacionales.</p>
-            <div class="skills-badges">
+            <div class="skills-badges" aria-label="Base de datos">
               <span class="skill-badge">MySQL</span>
             </div>
           </article>
@@ -284,7 +284,7 @@
               <h3 data-i18n="skills-tools-title">Herramientas</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-tools-desc">Control de versiones, utilidades de editor de código y terminal Linux.</p>
-            <div class="skills-badges">
+            <div class="skills-badges" aria-label="Herramientas de desarrollo">
               <span class="skill-badge">Git</span>
               <span class="skill-badge">GitHub</span>
               <span class="skill-badge">VS Code</span>
@@ -299,7 +299,7 @@
               <h3 data-i18n="skills-automation-title">Automatizaciones</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-automation-desc">Automatización de procesos, integraciones entre servicios, flujos de trabajo y asistentes automatizados mediante n8n.</p>
-            <div class="skills-badges">
+            <div class="skills-badges" aria-label="Automatizaciones">
               <span class="skill-badge">n8n</span>
             </div>
           </article>
@@ -311,7 +311,7 @@
               <h3 data-i18n="skills-soft-title">Destrezas Personales</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-soft-desc">Cualidades personales y de comunicación para la colaboración efectiva.</p>
-            <div class="skills-badges">
+            <div class="skills-badges" aria-label="Destrezas personales">
               <span class="skill-badge" data-i18n="soft-badge-team">Trabajo en equipo</span>
               <span class="skill-badge" data-i18n="soft-badge-comm">Comunicación</span>
               <span class="skill-badge" data-i18n="soft-badge-responsibility">Responsabilidad</span>
@@ -337,16 +337,16 @@
             <div class="project-card-visual">
               <div class="project-pattern" style="--pattern-hue: 220;"></div>
               <i data-lucide="bot" class="project-icon" aria-hidden="true"></i>
-              <span class="project-number">01</span>
+              <span class="project-number" aria-hidden="true">01</span>
             </div>
             <div class="project-card-body">
               <h3 data-i18n="project-bot-title">Bot de Delivery para Cafetería</h3>
               <p data-i18n="project-bot-desc">Aplicación de automatización desarrollada en n8n para la gestión de pedidos a domicilio en una cafetería local.</p>
-              <div class="project-tech">
+              <div class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">n8n</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/samuelgelvez-star/DeliveryBot_CafeteriaSam.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
+                <a href="https://github.com/Samuelgelvez20/DeliveryBot_CafeteriaSam.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
                   <i data-lucide="github" aria-hidden="true"></i>
                   <span data-i18n="btn-github">Ver repositorio</span>
                 </a>
@@ -359,18 +359,18 @@
             <div class="project-card-visual">
               <div class="project-pattern" style="--pattern-hue: 280;"></div>
               <i data-lucide="shopping-bag" class="project-icon" aria-hidden="true"></i>
-              <span class="project-number">02</span>
+              <span class="project-number" aria-hidden="true">02</span>
             </div>
             <div class="project-card-body">
               <h3 data-i18n="project-ecommerce-title">App de Ecommerce de Ropa</h3>
               <p data-i18n="project-ecommerce-desc">Interfaz responsive enfocada en catálogo y visualización atractiva de artículos de moda.</p>
-              <div class="project-tech">
+              <div class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">HTML5</span>
                 <span class="project-tag">CSS3</span>
                 <span class="project-tag">JavaScript</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/samuelgelvez-star/E-commers-App.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
+                <a href="https://github.com/Samuelgelvez20/E-commers-App.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
                   <i data-lucide="github" aria-hidden="true"></i>
                   <span data-i18n="btn-github">Ver repositorio</span>
                 </a>
@@ -383,18 +383,18 @@
             <div class="project-card-visual">
               <div class="project-pattern" style="--pattern-hue: 160;"></div>
               <i data-lucide="landmark" class="project-icon" aria-hidden="true"></i>
-              <span class="project-number">03</span>
+              <span class="project-number" aria-hidden="true">03</span>
             </div>
             <div class="project-card-body">
               <h3 data-i18n="project-bank-title">Sitio Web de Banco Ficticio1</h3>
               <p data-i18n="project-bank-desc">Maquetación estática de una sucursal bancaria virtual para experimentar con interfaces financieras limpias.</p>
-              <div class="project-tech">
+              <div class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">HTML5</span>
                 <span class="project-tag">CSS3</span>
                 <span class="project-tag">JavaScript</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/samuelgelvez-star/Acmebank_Web.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
+                <a href="https://github.com/Samuelgelvez20/Acmebank_Web.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
                   <i data-lucide="github" aria-hidden="true"></i>
                   <span data-i18n="btn-github">Ver repositorio</span>
                 </a>
@@ -407,16 +407,16 @@
             <div class="project-card-visual">
               <div class="project-pattern" style="--pattern-hue: 30;"></div>
               <i data-lucide="database" class="project-icon" aria-hidden="true"></i>
-              <span class="project-number">04</span>
+              <span class="project-number" aria-hidden="true">04</span>
             </div>
             <div class="project-card-body">
               <h3 data-i18n="project-pizzeria-title">Base de Datos MySQL para Pizzería</h3>
               <p data-i18n="project-pizzeria-desc">Modelado de base de datos relacional orientada al control de ingredientes, ventas y pedidos.</p>
-              <div class="project-tech">
+              <div class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">MySQL</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/samuelgelvez-star/Data-Base_Pizzeria.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
+                <a href="https://github.com/Samuelgelvez20/Data-Base_Pizzeria.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
                   <i data-lucide="github" aria-hidden="true"></i>
                   <span data-i18n="btn-github">Ver repositorio</span>
                 </a>
@@ -429,16 +429,16 @@
             <div class="project-card-visual">
               <div class="project-pattern" style="--pattern-hue: 340;"></div>
               <i data-lucide="wrench" class="project-icon" aria-hidden="true"></i>
-              <span class="project-number">05</span>
+              <span class="project-number" aria-hidden="true">05</span>
             </div>
             <div class="project-card-body">
               <h3 data-i18n="project-tools-title">Sistema de Préstamo de Herramientas Vecinal</h3>
               <p data-i18n="project-tools-desc">Aplicación de consola en Python para coordinar y registrar el préstamo de herramientas en un vecindario.</p>
-              <div class="project-tech">
+              <div class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">Python</span>
               </div>
               <div class="project-links">
-                <a href="https://github.com/samuelgelvez-star/Sistema-Gestor-de-Herramientas.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
+                <a href="https://github.com/Samuelgelvez20/Sistema-Gestor-de-Herramientas.git" class="btn btn-github" target="_blank" rel="noopener noreferrer" aria-label="Ver repositorio en GitHub">
                   <i data-lucide="github" aria-hidden="true"></i>
                   <span data-i18n="btn-github">Ver repositorio</span>
                 </a>
@@ -475,12 +475,12 @@
           <div class="contact-card">
             <div class="contact-card-body">
               <div class="contact-card-icon-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
               </div>
               <h3 class="contact-card-title">GitHub</h3>
               <p class="contact-card-text">SamuelGelvez</p>
             </div>
-            <a href="https://github.com/samuelgelvez-star" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-card-btn" data-i18n="contact-github-btn">
+            <a href="https://github.com/Samuelgelvez20" target="_blank" rel="noopener noreferrer" class="btn btn-secondary contact-card-btn" data-i18n="contact-github-btn">
               Ver perfil
               <i data-lucide="arrow-up-right" aria-hidden="true"></i>
             </a>
@@ -489,7 +489,7 @@
           <div class="contact-card">
             <div class="contact-card-body">
               <div class="contact-card-icon-wrap">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
               </div>
               <h3 class="contact-card-title">LinkedIn</h3>
               <p class="contact-card-text">Samuel David Gelvez Rodríguez</p>
@@ -527,11 +527,11 @@
           <a href="#contact" data-i18n="nav-contact">Contacto</a>
         </div>
         <div class="footer-social">
-          <a href="https://github.com/samuelgelvez-star" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+          <a href="https://github.com/Samuelgelvez20" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
           </a>
           <a href="https://www.linkedin.com/in/samuel-gelvez-rodriguez-b1b643381" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-brand-linkedin" aria-hidden="true"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M8 11v5" /><path d="M8 8v.01" /><path d="M12 16v-5" /><path d="M16 16v-3a2 2 0 1 0 -4 0" /><path d="M3 7a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v10a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4l0 -10" /></svg>
           </a>        
         </div>
       </div>
