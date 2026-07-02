@@ -144,7 +144,7 @@ La versión publicada puede visitarse aquí:
 
 📧 Correo: samueldavidgelvezr@gmail.com
 
-💼 LinkedIn: https://www.linkedin.com/in/samuel-gelvez-rodriguez-b1b643381
+💼 LinkedIn: https://www.linkedin.com/in/samuelgelvezdev/
 
 🐙 GitHub: https://github.com/SamuelGelvez20
 
