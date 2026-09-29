@@ -98,9 +98,9 @@ Base de datos relacional en MySQL/MariaDB que cubre el proceso de venta de pizza
 
 ### 🖥️ SICA-ZonaAcme
 
-Aplicación de escritorio en Java con interfaz Swing sobre PostgreSQL, con control de acceso basado en roles (RBAC) y auditoría de operaciones, gestionada con Maven.
+https://github.com/Samuelgelvez20/SICA-ZonaAcme
 
-> ⚠️ El enlace al repositorio está pendiente de confirmación.
+Aplicación de escritorio en Java con interfaz Swing sobre PostgreSQL, con control de acceso basado en roles (RBAC) y auditoría de operaciones, gestionada con Maven.
 
 ### 👕 E-commerce App
 
