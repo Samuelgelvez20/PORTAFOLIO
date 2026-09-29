@@ -1059,6 +1059,31 @@ header::before {
   transition: opacity 0.3s ease;
 }
 
+/* Tonos por tarjeta de proyecto */
+.hue-220 {
+  --pattern-hue: 220;
+}
+
+.hue-280 {
+  --pattern-hue: 280;
+}
+
+.hue-160 {
+  --pattern-hue: 160;
+}
+
+.hue-30 {
+  --pattern-hue: 30;
+}
+
+.hue-340 {
+  --pattern-hue: 340;
+}
+
+.hue-120 {
+  --pattern-hue: 120;
+}
+
 .project-card:hover .project-pattern {
   opacity: 0.18;
 }

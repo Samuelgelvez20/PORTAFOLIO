@@ -43,7 +43,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
   <!-- ========== Stylesheets ========== -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -55,7 +55,7 @@
       <div class="logo">
         <a href="#hero" aria-label="Ir al inicio">SGR</a>
       </div>
-      
+
       <nav id="main-nav" aria-label="Navegación Principal">
         <ul class="nav-links">
           <li><a href="#about" data-i18n="nav-about">Sobre Mí</a></li>
@@ -65,15 +65,15 @@
           <li><a href="#contact" data-i18n="nav-contact">Contacto</a></li>
         </ul>
       </nav>
-      
+
       <!-- Selector de Idioma (ES / EN) -->
       <div class="language-selector" role="group" aria-label="Selector de idioma">
-        <button id="lang-btn-es" class="lang-btn active" aria-pressed="true">ES</button>
-        <button id="lang-btn-en" class="lang-btn" aria-pressed="false">EN</button>
+        <button type="button" id="lang-btn-es" class="lang-btn active" aria-pressed="true">ES</button>
+        <button type="button" id="lang-btn-en" class="lang-btn" aria-pressed="false">EN</button>
       </div>
 
       <!-- Botón de Menú Móvil (Hamburguesa) -->
-      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
         <span class="hamburger"></span>
       </button>
     </div>
@@ -85,16 +85,16 @@
     <!-- 2. HERO SECTION -->
     <section id="hero" class="hero-section" aria-labelledby="hero-heading">
       <div class="hero-container">
-        
+
         <!-- Left Side: Profile Info -->
         <div class="hero-info">
           <span class="hero-greeting" data-i18n="hero-greeting">Hola, soy</span>
           <h1 id="hero-heading" class="hero-name">Samuel David Gelvez Rodríguez</h1>
           <p class="hero-subtitle" data-i18n="hero-title">Técnico en Desarrollo de Software | Desarrollador Full-Stack en Formación</p>
           <p class="hero-description" data-i18n="hero-description">Preparándome para mi primera oportunidad profesional, desarrollando aplicaciones eficientes y accesibles.</p>
-          
+
           <!-- Technology Badges -->
-          <div class="tech-badges-container" aria-label="Tecnologías destacadas">
+          <div role="group" class="tech-badges-container" aria-label="Tecnologías destacadas">
             <span class="tech-badge">HTML5</span>
             <span class="tech-badge">CSS3</span>
             <span class="tech-badge">JavaScript</span>
@@ -126,7 +126,7 @@
       <div class="section-container">
         <span class="section-tagline" data-i18n="about-heading">Sobre Mí</span>
         <h2 id="about-title" class="section-heading" data-i18n="about-title">Diseñando soluciones desde el código</h2>
-        
+
         <div class="about-grid">
           <!-- Text Introduction -->
           <div class="about-text-column">
@@ -135,7 +135,7 @@
 
           <!-- Cards Column -->
           <div class="about-cards-column">
-            
+
             <!-- Card 1: Formación -->
             <div class="info-card">
               <div class="card-header">
@@ -219,9 +219,9 @@
         <span class="section-tagline" data-i18n="objectives-heading">Objetivos</span>
         <h2 id="objectives-title" class="section-heading" data-i18n="objectives-title">Proyección de Crecimiento</h2>
         <p class="section-desc" data-i18n="objectives-subtitle">Mi camino hacia la madurez técnica y el desarrollo profesional.</p>
-        
+
         <div class="objectives-grid">
-          
+
           <!-- Card 1: Corto Plazo -->
           <div class="objective-card">
             <div class="obj-header">
@@ -256,7 +256,7 @@
         <span class="section-tagline" data-i18n="skills-heading">Habilidades</span>
         <h2 id="skills-title" class="section-heading" data-i18n="skills-title-heading">Stack Técnico</h2>
         <p class="section-desc" data-i18n="skills-subtitle">Tecnologías y herramientas con las que trabajo día a día.</p>
-        
+
         <div class="skills-grid">
           <!-- Frontend -->
           <article class="skills-card">
@@ -264,7 +264,7 @@
               <h3 data-i18n="skills-frontend-title">Frontend</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-frontend-desc">Desarrollo interfaces web modernas, responsivas y accesibles.</p>
-            <div class="skills-badges" aria-label="Tecnologías de frontend">
+            <div role="group" class="skills-badges" aria-label="Tecnologías de frontend">
               <span class="skill-badge">HTML5</span>
               <span class="skill-badge">CSS3</span>
               <span class="skill-badge">JavaScript</span>
@@ -277,7 +277,7 @@
               <h3 data-i18n="skills-programming-title">Programación</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-programming-desc">Construcción de lógica de aplicación y scripts en Java, Python y JavaScript.</p>
-            <div class="skills-badges" aria-label="Lenguajes de programación">
+            <div role="group" class="skills-badges" aria-label="Lenguajes de programación">
               <span class="skill-badge">Java</span>
               <span class="skill-badge">Python</span>
               <span class="skill-badge">JavaScript</span>
@@ -290,7 +290,7 @@
               <h3 data-i18n="skills-database-title">Bases de Datos</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-database-desc">Diseño, modelado y consultas en bases de datos relacionales con PostgreSQL, PL/pgSQL y MySQL.</p>
-            <div class="skills-badges" aria-label="Bases de datos">
+            <div role="group" class="skills-badges" aria-label="Bases de datos">
               <span class="skill-badge">PostgreSQL</span>
               <span class="skill-badge">PL/pgSQL</span>
               <span class="skill-badge">MySQL</span>
@@ -303,7 +303,7 @@
               <h3 data-i18n="skills-frameworks-title">Backend / Frameworks</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-frameworks-desc">Desarrollo backend en Java con el framework Spring.</p>
-            <div class="skills-badges" aria-label="Frameworks backend">
+            <div role="group" class="skills-badges" aria-label="Frameworks backend">
               <span class="skill-badge">Spring</span>
             </div>
           </article>
@@ -314,7 +314,7 @@
               <h3 data-i18n="skills-tools-title">Herramientas y Entorno</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-tools-desc">Control de versiones, entornos de desarrollo reproducibles y terminal Linux.</p>
-            <div class="skills-badges" aria-label="Herramientas y entorno de desarrollo">
+            <div role="group" class="skills-badges" aria-label="Herramientas y entorno de desarrollo">
               <span class="skill-badge">Git</span>
               <span class="skill-badge">GitHub</span>
               <span class="skill-badge">VS Code</span>
@@ -332,7 +332,7 @@
               <h3 data-i18n="skills-automation-title">Automatizaciones</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-automation-desc">Automatización de procesos, integraciones entre servicios y flujos de trabajo mediante n8n.</p>
-            <div class="skills-badges" aria-label="Automatizaciones">
+            <div role="group" class="skills-badges" aria-label="Automatizaciones">
               <span class="skill-badge">n8n</span>
             </div>
           </article>
@@ -343,7 +343,7 @@
               <h3 data-i18n="skills-soft-title">Destrezas Personales</h3>
             </div>
             <p class="skills-card-desc" data-i18n="skills-soft-desc">Cualidades personales y de comunicación para la colaboración efectiva.</p>
-            <div class="skills-badges" aria-label="Destrezas personales">
+            <div role="group" class="skills-badges" aria-label="Destrezas personales">
               <span class="skill-badge" data-i18n="soft-badge-team">Trabajo en equipo</span>
               <span class="skill-badge" data-i18n="soft-badge-comm">Comunicación</span>
               <span class="skill-badge" data-i18n="soft-badge-responsibility">Responsabilidad</span>
@@ -367,7 +367,7 @@
           <!-- Proyecto 1: F1 Simulator -->
           <article class="project-card">
             <div class="project-card-visual">
-              <div class="project-pattern" style="--pattern-hue: 220;"></div>
+              <div class="project-pattern hue-220"></div>
               <!-- FUTURE PROJECT SCREENSHOT: sustituir el placeholder por
                    <img class="project-img" src="images/projects/f1-simulator.webp" alt="F1 Simulator" loading="lazy"> -->
               <div class="project-image-placeholder" data-slug="f1-simulator" aria-hidden="true"></div>
@@ -376,7 +376,7 @@
             <div class="project-card-body">
               <h3 data-i18n="project-f1-title">F1 Simulator</h3>
               <p data-i18n="project-f1-desc">Simulador de sesiones de clasificación de Fórmula 1 desarrollado en Java: gestión de circuitos, pilotos, equipos y vehículos, con simulación concurrente y persistencia en PostgreSQL.</p>
-              <div class="project-tech" aria-label="Tecnologías del proyecto">
+              <div role="group" class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">Java</span>
                 <span class="project-tag">Swing</span>
                 <span class="project-tag">PostgreSQL</span>
@@ -394,7 +394,7 @@
           <!-- Proyecto 2: Gestión SST-PESV -->
           <article class="project-card">
             <div class="project-card-visual">
-              <div class="project-pattern" style="--pattern-hue: 280;"></div>
+              <div class="project-pattern hue-280"></div>
               <!-- FUTURE PROJECT SCREENSHOT: sustituir el placeholder por
                    <img class="project-img" src="images/projects/gestion-sst-pesv.webp" alt="Gestión SST-PESV" loading="lazy"> -->
               <div class="project-image-placeholder" data-slug="gestion-sst-pesv" aria-hidden="true"></div>
@@ -403,7 +403,7 @@
             <div class="project-card-body">
               <h3 data-i18n="project-sst-title">Gestión SST-PESV</h3>
               <p data-i18n="project-sst-desc">Base de datos relacional multi-tenant en PostgreSQL para la gestión de Salud y Seguridad en el Trabajo y Seguridad Vial, con funciones y procedimientos PL/pgSQL, triggers y vistas materializadas orquestadas con Docker Compose.</p>
-              <div class="project-tech" aria-label="Tecnologías del proyecto">
+              <div role="group" class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">PostgreSQL</span>
                 <span class="project-tag">PL/pgSQL</span>
                 <span class="project-tag">Docker</span>
@@ -419,7 +419,7 @@
           <!-- Proyecto 3: Acmebank Web -->
           <article class="project-card">
             <div class="project-card-visual">
-              <div class="project-pattern" style="--pattern-hue: 160;"></div>
+              <div class="project-pattern hue-160"></div>
               <!-- FUTURE PROJECT SCREENSHOT: sustituir el placeholder por
                    <img class="project-img" src="images/projects/acmebank-web.webp" alt="Acmebank Web" loading="lazy"> -->
               <div class="project-image-placeholder" data-slug="acmebank-web" aria-hidden="true"></div>
@@ -428,7 +428,7 @@
             <div class="project-card-body">
               <h3 data-i18n="project-bank-title">Acmebank Web</h3>
               <p data-i18n="project-bank-desc">Portal de autogestión bancaria con registro, inicio de sesión, consignaciones, retiros y pagos de servicios, construido con HTML5, CSS3 y JavaScript y con los datos guardados en el navegador (localStorage / sessionStorage).</p>
-              <div class="project-tech" aria-label="Tecnologías del proyecto">
+              <div role="group" class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">HTML5</span>
                 <span class="project-tag">CSS3</span>
                 <span class="project-tag">JavaScript</span>
@@ -444,7 +444,7 @@
           <!-- Proyecto 4: Pizzeria Don Piccolo -->
           <article class="project-card">
             <div class="project-card-visual">
-              <div class="project-pattern" style="--pattern-hue: 30;"></div>
+              <div class="project-pattern hue-30"></div>
               <!-- FUTURE PROJECT SCREENSHOT: sustituir el placeholder por
                    <img class="project-img" src="images/projects/pizzeria-don-piccolo.webp" alt="Pizzeria Don Piccolo" loading="lazy"> -->
               <div class="project-image-placeholder" data-slug="pizzeria-don-piccolo" aria-hidden="true"></div>
@@ -453,7 +453,7 @@
             <div class="project-card-body">
               <h3 data-i18n="project-piccolo-title">Pizzeria Don Piccolo</h3>
               <p data-i18n="project-piccolo-desc">Base de datos relacional en MySQL/MariaDB que cubre el proceso de venta de pizzas: clientes, catálogo, pedidos, repartidores y pagos, con funciones, procedimientos almacenados, triggers y vistas.</p>
-              <div class="project-tech" aria-label="Tecnologías del proyecto">
+              <div role="group" class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">MySQL</span>
                 <span class="project-tag">MariaDB</span>
                 <span class="project-tag">SQL</span>
@@ -469,7 +469,7 @@
           <!-- Proyecto 5: SICA-ZonaAcme -->
           <article class="project-card">
             <div class="project-card-visual">
-              <div class="project-pattern" style="--pattern-hue: 340;"></div>
+              <div class="project-pattern hue-340"></div>
               <!-- FUTURE PROJECT SCREENSHOT: sustituir el placeholder por
                    <img class="project-img" src="images/projects/sica-zonaacme.webp" alt="SICA-ZonaAcme" loading="lazy"> -->
               <div class="project-image-placeholder" data-slug="sica-zonaacme" aria-hidden="true"></div>
@@ -478,7 +478,7 @@
             <div class="project-card-body">
               <h3 data-i18n="project-sica-title">SICA-ZonaAcme</h3>
               <p data-i18n="project-sica-desc">Aplicación de escritorio en Java con interfaz Swing sobre PostgreSQL, con control de acceso basado en roles (RBAC) y auditoría de operaciones, gestionada con Maven.</p>
-              <div class="project-tech" aria-label="Tecnologías del proyecto">
+              <div role="group" class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">Java</span>
                 <span class="project-tag">Swing</span>
                 <span class="project-tag">PostgreSQL</span>
@@ -495,7 +495,7 @@
           <!-- Proyecto 6: E-commerce App -->
           <article class="project-card">
             <div class="project-card-visual">
-              <div class="project-pattern" style="--pattern-hue: 120;"></div>
+              <div class="project-pattern hue-120"></div>
               <!-- FUTURE PROJECT SCREENSHOT: sustituir el placeholder por
                    <img class="project-img" src="images/projects/e-commerce-app.webp" alt="E-commerce App" loading="lazy"> -->
               <div class="project-image-placeholder" data-slug="e-commerce-app" aria-hidden="true"></div>
@@ -504,7 +504,7 @@
             <div class="project-card-body">
               <h3 data-i18n="project-ecommerce-title">E-commerce App</h3>
               <p data-i18n="project-ecommerce-desc">Frontend mobile-first para una tienda de ropa desarrollado con HTML5 y CSS3 nativo: catálogo con búsqueda y categorías, páginas de detalle de producto y checkout.</p>
-              <div class="project-tech" aria-label="Tecnologías del proyecto">
+              <div role="group" class="project-tech" aria-label="Tecnologías del proyecto">
                 <span class="project-tag">HTML5</span>
                 <span class="project-tag">CSS3</span>
               </div>
@@ -525,7 +525,7 @@
         <span class="section-tagline" data-i18n="contact-heading">Contacto</span>
         <h2 id="contact-title" class="section-heading" data-i18n="contact-title-heading">¿Preparado para trabajar juntos?</h2>
         <p class="section-desc" data-i18n="contact-p">Actualmente me encuentro en busca de proyectos y de mi primera oportunidad laboral. Si tienes una propuesta o quieres conversar, no dudes en escribirme.</p>
-        
+
         <div class="contact-methods">
           <div class="contact-card">
             <div class="contact-card-body">
@@ -598,7 +598,7 @@
 
   <!-- Iconos Lucide (CDN) -->
   <script src="https://unpkg.com/lucide@latest"></script>
-  
+
   <!-- Scripts del Portafolio -->
   <script src="js/main.js"></script>
 </body>
