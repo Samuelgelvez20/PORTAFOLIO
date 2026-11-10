@@ -1,0 +1,29 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio Personal - Samuel David Gelvez Rodríguez",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Samuelgelvez20/PORTAFOLIO.git"
+  },
+  "homepage": "https://samuelgelvez20.github.io/PORTAFOLIO/",
+  "dependencies": {
+    "lucide-react": "^1.71.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@vitejs/plugin-react": "^6.3.0",
+    "autoprefixer": "^10.6.2",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.5",
+    "vite": "^8.3.7"
+  }
+}

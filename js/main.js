@@ -219,7 +219,7 @@ function applyTranslations(lang) {
 
   if (cvButton) {
     cvButton.href =
-      currentLanguage === "en"
+      lang === "en"
         ? "cv/CV_SAMUELGELVEZ_ENGLISH.pdf"
         : "cv/CV_SAMUELGELVEZ.pdf";
   }
