@@ -110,14 +110,6 @@ export const Hero = () => {
                 />
               </div>
             </div>
-
-            {/* Minimalist floating status label */}
-            <div className="absolute -bottom-2 -right-2 sm:bottom-2 sm:right-2 px-3 py-1.5 rounded-xl glass-panel shadow-lg border border-gray-200/90 dark:border-gray-700/80 flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-              <span className="text-xs font-bold text-gray-900 dark:text-white font-mono tracking-tight">
-                Campuslands
-              </span>
-            </div>
           </div>
 
         </div>
