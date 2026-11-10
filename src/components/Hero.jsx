@@ -8,14 +8,16 @@ export const Hero = () => {
 
   const heroTechnologies = [
     'Java',
+    'Spring Boot',
+    'Python',
     'PostgreSQL',
     'MySQL',
-    'Python',
+    'JSON',
     'React',
     'Tailwind',
     'Docker',
-    'n8n',
     'Git',
+    'Linux',
   ];
 
   return (

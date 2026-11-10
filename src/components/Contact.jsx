@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/LanguageContext';
 import { Download, Copy, Check, ArrowUpRight } from 'lucide-react';
+import { TechIcon } from './TechIcon';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const Contact = () => {
@@ -44,21 +45,52 @@ export const Contact = () => {
         </div>
 
         {/* Contact Methods Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
           
-          {/* Card 1: Email */}
-          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-gray-200/80 dark:border-gray-800/80 card-glow flex flex-col justify-between">
+          {/* Card 1: WhatsApp */}
+          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-emerald-500/20 card-glow flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400">
+                <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">
+                  Chat Rápido
+                </span>
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                <TechIcon name="whatsapp" className="w-5 h-5 text-emerald-400" />
+                <span>WhatsApp</span>
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-gray-300 font-mono">
+                {personal.phone}
+              </p>
+            </div>
+
+            <div className="mt-6">
+              <a
+                href={personal.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm shadow-emerald-500/25 transition-all hover:-translate-y-0.5 active:translate-y-0"
+              >
+                <span>{t.contact.chatWhatsapp || "Chatear por WhatsApp"}</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Card 2: Email */}
+          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-white/10 card-glow flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs font-semibold uppercase tracking-wider text-blue-400">
                   Canal Directo
                 </span>
                 <span className="w-2 h-2 rounded-full bg-blue-500"></span>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
+              <h3 className="text-lg sm:text-xl font-bold text-white">
                 Email
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 break-all select-all font-mono">
+              <p className="mt-2 text-xs sm:text-sm text-gray-300 break-all select-all font-mono">
                 {personal.email}
               </p>
             </div>
@@ -66,7 +98,7 @@ export const Contact = () => {
             <div className="mt-6 flex items-center gap-2">
               <a
                 href={`mailto:${personal.email}`}
-                className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 transition-all shadow-xs hover:-translate-y-0.5 active:translate-y-0"
+                className="flex-1 inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 transition-all shadow-xs hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{t.contact.sendEmail}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -75,11 +107,11 @@ export const Contact = () => {
               <button
                 type="button"
                 onClick={handleCopyEmail}
-                className="inline-flex items-center justify-center p-2.5 rounded-xl text-gray-700 dark:text-gray-300 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-all cursor-pointer relative hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center justify-center p-2.5 rounded-xl text-gray-300 bg-white/5 hover:bg-white/10 border border-white/10 transition-all cursor-pointer relative hover:-translate-y-0.5 active:translate-y-0"
                 title={t.contact.copyEmail}
               >
                 {copied ? (
-                  <Check className="w-4 h-4 text-emerald-500 animate-in zoom-in duration-150" />
+                  <Check className="w-4 h-4 text-emerald-400 animate-in zoom-in duration-150" />
                 ) : (
                   <Copy className="w-4 h-4" />
                 )}
@@ -92,19 +124,51 @@ export const Contact = () => {
             </div>
           </div>
 
-          {/* Card 2: GitHub */}
-          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-gray-200/80 dark:border-gray-800/80 card-glow flex flex-col justify-between">
+          {/* Card 3: LinkedIn */}
+          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-white/10 card-glow flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold uppercase tracking-wider text-purple-600 dark:text-purple-400">
+                <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
+                  Red Profesional
+                </span>
+                <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
+              </div>
+              <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                <TechIcon name="linkedin" className="w-5 h-5 text-cyan-400" />
+                <span>LinkedIn</span>
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-gray-300 truncate font-medium">
+                Samuel David Gelvez
+              </p>
+            </div>
+
+            <div className="mt-6">
+              <a
+                href={personal.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-gray-200 bg-white/5 hover:bg-white/10 border border-white/10 transition-all hover:-translate-y-0.5 active:translate-y-0"
+              >
+                <span>{t.contact.viewProfile}</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+          </div>
+
+          {/* Card 4: GitHub */}
+          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-white/10 card-glow flex flex-col justify-between">
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs font-semibold uppercase tracking-wider text-purple-400">
                   Código & Repos
                 </span>
                 <span className="w-2 h-2 rounded-full bg-purple-500"></span>
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
-                GitHub
+              <h3 className="text-lg sm:text-xl font-bold text-white flex items-center gap-2">
+                <TechIcon name="github" className="w-5 h-5 text-purple-400" />
+                <span>GitHub</span>
               </h3>
-              <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 font-mono">
+              <p className="mt-2 text-xs sm:text-sm text-gray-300 font-mono">
                 @Samuelgelvez20
               </p>
             </div>
@@ -114,37 +178,7 @@ export const Contact = () => {
                 href={personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-all hover:-translate-y-0.5 active:translate-y-0"
-              >
-                <span>{t.contact.viewProfile}</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
-            </div>
-          </div>
-
-          {/* Card 3: LinkedIn */}
-          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-gray-200/80 dark:border-gray-800/80 card-glow flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-semibold uppercase tracking-wider text-cyan-600 dark:text-cyan-400">
-                  Red Profesional
-                </span>
-                <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white">
-                LinkedIn
-              </h3>
-              <p className="mt-2 text-xs sm:text-sm text-gray-600 dark:text-gray-300 truncate font-medium">
-                Samuel David Gelvez Rodríguez
-              </p>
-            </div>
-
-            <div className="mt-6">
-              <a
-                href={personal.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-gray-800 dark:text-gray-200 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 border border-gray-200 dark:border-gray-700 transition-all hover:-translate-y-0.5 active:translate-y-0"
+                className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-gray-200 bg-white/5 hover:bg-white/10 border border-white/10 transition-all hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{t.contact.viewProfile}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

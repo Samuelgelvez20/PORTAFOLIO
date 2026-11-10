@@ -2,16 +2,20 @@ export const portfolioData = {
   personal: {
     name: "Samuel David Gelvez Rodríguez",
     shortName: "SGR",
-    titleEs: "Técnico en Desarrollo de Software | Desarrollador Full-Stack",
-    titleEn: "Software Development Technician | Full-Stack Developer",
-    location: "Floridablanca / Bucaramanga, Colombia",
-    availability: "Disponible para nuevas oportunidades",
+    titleEs: "Técnico en Desarrollo De Software | Desarrollador Full-Stack Junior",
+    titleEn: "Software Development Technician | Junior Full-Stack Developer",
+    location: "Piedecuesta / Bucaramanga, Santander • Colombia",
+    availability: "Disponible para oportunidades presenciales y remotas",
     email: "samueldavidgelvezr@gmail.com",
+    phone: "+57 305 265 4240",
+    phoneRaw: "3052654240",
+    whatsapp: "https://wa.me/573052654240?text=Hola%20Samuel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar",
     github: "https://github.com/Samuelgelvez20",
     linkedin: "https://www.linkedin.com/in/samuelgelvezdev/",
     avatar: "images/profile/perfil_img.jpg",
     cvEs: "cv/CV_SAMUELGELVEZ.pdf",
     cvEn: "cv/CV_SAMUELGELVEZ_ENGLISH.pdf",
+    cvPendingUpdate: true,
   },
 
   translations: {
@@ -25,26 +29,26 @@ export const portfolioData = {
       },
       hero: {
         greeting: "Hola, soy",
-        title: "Técnico en Desarrollo de Software",
-        subtitle: "Desarrollador Full-Stack en Formación",
-        description: "Formado en Campuslands, enfocado en construir software estructurado con Java, bases de datos relacionales en PostgreSQL/MySQL, interfaces modernas con React/Tailwind y automatización de procesos con n8n.",
+        title: "Técnico en Desarrollo De Software",
+        subtitle: "Desarrollador Full-Stack Junior",
+        description: "Formado en Campuslands, enfocado en construir software estructurado con Java y Spring Boot, bases de datos relacionales en PostgreSQL/MySQL y persistencia JSON, interfaces modernas con React/Tailwind y automatización y scripting con Python.",
         ctaProjects: "Ver Proyectos",
         ctaContact: "Contactar",
-        badgeAvailable: "Disponible para contratación / pasantías",
-        location: "Floridablanca, Santander • Colombia",
+        badgeAvailable: "Disponible para roles presenciales & remotos",
+        location: "Piedecuesta / Bucaramanga, Santander • Colombia",
       },
       about: {
         tagline: "Sobre Mí",
         title: "Ingeniería de software con disciplina y propósito",
-        p1: "Soy Técnico en Desarrollo de Software formado en Campuslands (Floridablanca). Cuento con una sólida base técnica en programación orientada a objetos con Java y Python, diseño y optimización de bases de datos relacionales con PostgreSQL (PL/pgSQL) y MySQL, y desarrollo frontend moderno con HTML5, CSS3, JavaScript, React y Tailwind CSS.",
-        p2: "Me caracterizo por ser una persona empática, metódica y orientada al aprendizaje continuo. Además de la lógica de negocio y arquitectura de software (incluyendo principios como Domain-Driven Design), implemento automatizaciones con n8n para conectar servicios y empleo Docker y Git/GitHub para flujos de trabajo colaborativos y entornos reproducibles.",
+        p1: "Soy Técnico en Desarrollo de Software formado en Campuslands. Cuento con una sólida base técnica en arquitectura backend con Java y Spring Boot, automatización y scripting con Python, diseño y optimización de bases de datos relacionales con PostgreSQL (PL/pgSQL), MySQL y persistencia estructurada en JSON, además del desarrollo de interfaces web modernas con React y Tailwind CSS.",
+        p2: "Me caracterizo por el trabajo en equipo, la resolución estructurada de problemas y una comunicación asertiva. Implemento arquitecturas de software modulares (incluyendo Domain-Driven Design y Arquitectura Hexagonal), scripts de automatización con Python y utilizo Docker, Git/GitHub y entornos Linux para garantizar flujos de trabajo reproducibles y profesionales.",
         educationTitle: "Formación Académica",
         edu1Title: "Técnico en Desarrollo de Software",
         edu1Place: "Campuslands (Floridablanca) • Ene - Dic 2026",
         edu2Title: "Bachiller Académico",
         edu2Place: "Instituto Promoción Social (IPS Piedecuesta) • 2025",
-        softSkillsTitle: "Destrezas Personales",
-        softSkillsList: "Empatía • Responsabilidad • Disciplina • Creatividad • Adaptabilidad",
+        softSkillsTitle: "Habilidades Blandas & Valores",
+        softSkillsList: "Trabajo en equipo • Resolución de problemas • Comunicación efectiva y asertiva • Inteligencia emocional • Gestión del tiempo y organización • Pensamiento crítico",
         languagesTitle: "Idiomas",
         langNative: "Español — Nativo",
         langEnglish: "Inglés — B1 (Técnico / Conversacional)",
@@ -52,28 +56,28 @@ export const portfolioData = {
         offerIntro: "Competencias prácticas listas para impactar en proyectos reales:",
         offerItems: [
           {
-            title: "Desarrollo Backend (Java & Python)",
-            desc: "Construcción de lógica de negocio robusta, principios SOLID, arquitectura modular y scripts de procesamiento de datos."
+            title: "Desarrollo Backend (Java, Spring Boot & Python)",
+            desc: "Construcción de lógica de negocio robusta, APIs RESTful, arquitectura modular (Hexagonal / DDD), principios SOLID y scripts de automatización."
           },
           {
-            title: "Bases de Datos Relacionales Avanzadas",
-            desc: "Modelado relacional, normalización, funciones y procedimientos almacenados (PL/pgSQL), triggers de auditoría y vistas materializadas."
+            title: "Bases de Datos & Persistencia (PostgreSQL, MySQL & JSON)",
+            desc: "Modelado relacional, funciones y procedimientos almacenados (PL/pgSQL), triggers de auditoría, vistas materializadas y persistencia estructurada con JSON."
           },
           {
             title: "Frontend Moderno con React & Tailwind",
-            desc: "Construcción de interfaces web responsivas, dinámicas, accesibles y optimizadas para rendimiento y SEO."
+            desc: "Construcción de interfaces web responsivas, dinámicas, accesibles y optimizadas para rendimiento y experiencia de usuario."
           },
           {
-            title: "Automatización de Flujos con n8n",
-            desc: "Integración de aplicaciones, bots inteligentes (Telegram, APIs externas) y orquestación de tareas repetitivas."
+            title: "Automatización & Scripting con Python",
+            desc: "Automatización de tareas, procesamiento y limpieza de datos, web scraping e integración eficiente de APIs y servicios."
           },
           {
             title: "Contenedores Docker & Control de Versiones",
-            desc: "Estandarización de entornos de ejecución con Docker Compose y flujo de trabajo profesional con Git y GitHub."
+            desc: "Estandarización de entornos de ejecución con Docker, Docker Compose, entornos Linux y flujo de trabajo profesional con Git y GitHub."
           },
           {
-            title: "Desarrollo de Principio a Fin (Full Lifecycle)",
-            desc: "Desde la recolección de requisitos y diseño de esquemas de datos hasta la implementación, pruebas y documentación."
+            title: "Ciclo de Desarrollo Completo (Full Lifecycle)",
+            desc: "Desde la recolección de requisitos y diseño de esquemas de datos hasta la implementación, pruebas y entrega."
           }
         ]
       },
@@ -82,11 +86,11 @@ export const portfolioData = {
         title: "Proyección Profesional",
         subtitle: "Un plan estratégico de evolución hacia la madurez en ingeniería de software.",
         shortTitle: "Corto Plazo",
-        shortDesc: "Vincularme a mi primer rol profesional o pasantía en desarrollo de software, aportando valor en desarrollo backend con Java/Python, bases de datos o desarrollo frontend moderno.",
+        shortDesc: "Iniciar mi trayectoria profesional insertándome en el mercado laboral para adquirir experiencia práctica y aplicar mis conocimientos en entornos de desarrollo reales.",
         mediumTitle: "Mediano Plazo",
-        mediumDesc: "Consolidarme como desarrollador Full Stack autónomo, profundizando en arquitecturas cloud, microservicios con Spring Boot y optimización de rendimiento en bases de datos.",
+        mediumDesc: "Consolidar mi perfil como desarrollador full-stack, orientando mi especialización hacia la arquitectura y desarrollo de software backend.",
         longTitle: "Largo Plazo",
-        longDesc: "Liderar arquitecturas de sistemas distribuidos, participar en iniciativas de código abierto de alto impacto y apoyar como mentor en la formación de nuevos talentos tecnológicos.",
+        longDesc: "Formar parte de proyectos de alto impacto y diversa naturaleza que me permitan poner a prueba mi capacidad técnica, resolver problemas complejos y evolucionar continuamente mis competencias.",
       },
       skills: {
         tagline: "Stack Técnico",
@@ -94,17 +98,17 @@ export const portfolioData = {
         subtitle: "Herramientas que domino y aplico en mis proyectos y formación diaria.",
         categories: {
           backend: "Backend & Lenguajes",
-          databases: "Bases de Datos Relacionales",
+          databases: "Bases de Datos & Persistencia",
           frontend: "Frontend & UI",
           tools: "Herramientas & Entornos",
-          automation: "Automatización & Integraciones",
-          soft: "Valores & Habilidades Blandas",
+          automation: "Automatización & Scripting",
+          soft: "Habilidades Blandas",
         }
       },
       projects: {
         tagline: "Portafolio",
         title: "Proyectos Destacados",
-        subtitle: "Aplicaciones, bases de datos y soluciones de automatización construidas con código limpio y buenas prácticas.",
+        subtitle: "Aplicaciones, bases de datos y soluciones de software construidas con código limpio y buenas prácticas.",
         filterAll: "Todos",
         filterFullstack: "Full-Stack & Web",
         filterBackend: "Backend & BD",
@@ -116,10 +120,11 @@ export const portfolioData = {
       contact: {
         tagline: "Contacto",
         title: "¿Listo para construir juntos?",
-        description: "Me encuentro activamente en búsqueda de mi primera oportunidad laboral o pasantía en desarrollo de software. Si tienes una propuesta, proyecto o quieres conversar, contáctame.",
+        description: "Me encuentro activamente en búsqueda de mi primera oportunidad laboral o pasantía en desarrollo de software, disponible para roles presenciales y remotos.",
         copyEmail: "Copiar correo",
         emailCopied: "¡Copiado!",
         sendEmail: "Enviar correo",
+        chatWhatsapp: "Chatear por WhatsApp",
         viewProfile: "Ver perfil",
         downloadCv: "Descargar CV",
       },
@@ -141,25 +146,25 @@ export const portfolioData = {
       hero: {
         greeting: "Hi, I am",
         title: "Software Development Technician",
-        subtitle: "Full-Stack Developer in Training",
-        description: "Trained at Campuslands, focused on engineering well-structured software with Java, relational databases in PostgreSQL/MySQL, modern web UIs with React/Tailwind, and workflow automation with n8n.",
+        subtitle: "Junior Full-Stack Developer",
+        description: "Trained at Campuslands, focused on engineering well-structured software with Java and Spring Boot, relational databases in PostgreSQL/MySQL and JSON persistence, modern web UIs with React/Tailwind, and scripting and automation with Python.",
         ctaProjects: "View Projects",
         ctaContact: "Get in Touch",
-        badgeAvailable: "Open to full-time roles & internships",
-        location: "Floridablanca, Santander • Colombia",
+        badgeAvailable: "Open to in-person & remote roles",
+        location: "Piedecuesta / Bucaramanga, Santander • Colombia",
       },
       about: {
         tagline: "About Me",
         title: "Software engineering driven by discipline and purpose",
-        p1: "I am a Software Development Technician educated at Campuslands (Floridablanca). I hold a strong foundation in Object-Oriented Programming with Java and Python, relational database architecture with PostgreSQL (PL/pgSQL) and MySQL, and modern frontend development with HTML5, CSS3, JavaScript, React, and Tailwind CSS.",
-        p2: "Known for being empathetic, analytical, and committed to continuous learning. Alongside software design principles (including Domain-Driven Design), I build workflow automations with n8n to integrate services and leverage Docker and Git/GitHub for collaborative version control and reproducible environments.",
+        p1: "I am a Software Development Technician educated at Campuslands. I hold a solid technical foundation in backend architecture with Java and Spring Boot, scripting and automation with Python, relational database modeling and optimization with PostgreSQL (PL/pgSQL), MySQL and structured JSON persistence, as well as modern frontend web applications with React and Tailwind CSS.",
+        p2: "Known for teamwork, structured problem solving, and assertive communication. I implement modular software architectures (including Domain-Driven Design and Hexagonal Architecture), Python automation scripts, and leverage Docker, Git/GitHub, and Linux environments to guarantee reproducible, professional workflows.",
         educationTitle: "Education & Training",
         edu1Title: "Software Development Technician",
         edu1Place: "Campuslands (Floridablanca) • Jan - Dec 2026",
         edu2Title: "High School Diploma",
         edu2Place: "Instituto Promoción Social (IPS Piedecuesta) • 2025",
         softSkillsTitle: "Soft Skills & Values",
-        softSkillsList: "Empathy • Responsibility • Discipline • Creativity • Adaptability",
+        softSkillsList: "Teamwork • Problem Solving • Effective & Assertive Communication • Emotional Intelligence • Time Management & Organization • Critical Thinking",
         languagesTitle: "Languages",
         langNative: "Spanish — Native",
         langEnglish: "English — B1 (Technical / Conversational)",
@@ -167,24 +172,24 @@ export const portfolioData = {
         offerIntro: "Hands-on capabilities ready for real-world development teams:",
         offerItems: [
           {
-            title: "Backend Development (Java & Python)",
-            desc: "Object-oriented business logic, SOLID principles, modular architecture, and automated data processing scripts."
+            title: "Backend Development (Java, Spring Boot & Python)",
+            desc: "Object-oriented business logic, RESTful APIs, modular architectures (Hexagonal / DDD), SOLID principles, and automation scripts."
           },
           {
-            title: "Advanced Relational Databases",
-            desc: "Relational data modeling, stored procedures, PL/pgSQL triggers, audit logging, and materialized views."
+            title: "Databases & Persistence (PostgreSQL, MySQL & JSON)",
+            desc: "Relational data modeling, stored procedures, PL/pgSQL triggers, audit logging, materialized views, and structured JSON storage."
           },
           {
             title: "Modern Frontend with React & Tailwind",
-            desc: "Fast, accessible, and mobile-first user interfaces built with React, modern JavaScript, and Tailwind CSS."
+            desc: "Fast, accessible, and responsive user interfaces built with React, modern JavaScript, and Tailwind CSS."
           },
           {
-            title: "Workflow Automation with n8n",
-            desc: "Service integrations, intelligent chatbots (Telegram, Webhooks), and automated business process pipelines."
+            title: "Automation & Scripting with Python",
+            desc: "Workflow automation, data cleaning and processing, web scraping, and efficient integration of APIs and services."
           },
           {
             title: "Docker Containers & Version Control",
-            desc: "Reproducible development environments with Docker Compose and Git/GitHub branching workflows."
+            desc: "Standardized execution environments with Docker, Linux workflows, and collaborative version control using Git and GitHub."
           },
           {
             title: "Full Development Lifecycle",
@@ -195,13 +200,13 @@ export const portfolioData = {
       objectives: {
         tagline: "Roadmap & Vision",
         title: "Professional Growth",
-        subtitle: "A strategic progression toward senior-level software engineering.",
+        subtitle: "A strategic progression toward software engineering maturity.",
         shortTitle: "Short Term",
-        shortDesc: "Secure my first professional developer role or internship, bringing value in Java/Python backend development, relational databases, or modern frontend solutions.",
+        shortDesc: "Launch my professional career by entering the job market to gain hands-on experience and apply my knowledge in real-world development environments.",
         mediumTitle: "Medium Term",
-        mediumDesc: "Consolidate my Full Stack capabilities, specializing in cloud architectures, Spring Boot microservices, and database performance tuning.",
+        mediumDesc: "Consolidate my profile as a full-stack developer, steering my specialization toward backend software architecture and development.",
         longTitle: "Long Term",
-        longDesc: "Design distributed systems architectures, contribute to impactful open-source projects, and mentor emerging technical talent.",
+        longDesc: "Contribute to high-impact and diverse projects that challenge my technical capabilities, solve complex problems, and continuously evolve my competencies.",
       },
       skills: {
         tagline: "Tech Stack",
@@ -209,17 +214,17 @@ export const portfolioData = {
         subtitle: "Tools and technologies I master and apply in daily development.",
         categories: {
           backend: "Backend & Languages",
-          databases: "Relational Databases",
+          databases: "Databases & Persistence",
           frontend: "Frontend & UI",
-          tools: "Tools & DevOps",
-          automation: "Automation & Integrations",
-          soft: "Professional Qualities",
+          tools: "Tools & Environments",
+          automation: "Automation & Scripting",
+          soft: "Soft Skills",
         }
       },
       projects: {
         tagline: "Portfolio",
         title: "Featured Projects",
-        subtitle: "Applications, relational databases, and automated workflows crafted with clean code standards.",
+        subtitle: "Applications, relational databases, and software solutions crafted with clean code standards.",
         filterAll: "All",
         filterFullstack: "Full-Stack & Web",
         filterBackend: "Backend & DB",
@@ -231,10 +236,11 @@ export const portfolioData = {
       contact: {
         tagline: "Contact",
         title: "Let's build something remarkable",
-        description: "Actively seeking my first professional developer opportunity or internship. If you have an opening, project, or want to connect, feel free to reach out.",
+        description: "Actively seeking my first professional developer opportunity or internship, available for in-person and remote roles.",
         copyEmail: "Copy email",
         emailCopied: "Copied!",
         sendEmail: "Send email",
+        chatWhatsapp: "Chat on WhatsApp",
         viewProfile: "View profile",
         downloadCv: "Download CV",
       },
@@ -251,8 +257,8 @@ export const portfolioData = {
       categoryKey: "backend",
       skills: [
         { name: "Java" },
+        { name: "Spring Boot" },
         { name: "Python" },
-        { name: "Spring" },
         { name: "Maven" },
       ]
     },
@@ -260,9 +266,9 @@ export const portfolioData = {
       categoryKey: "databases",
       skills: [
         { name: "PostgreSQL" },
-        { name: "PL/pgSQL" },
         { name: "MySQL" },
-        { name: "MariaDB" },
+        { name: "JSON" },
+        { name: "PL/pgSQL" },
       ]
     },
     {
@@ -279,7 +285,6 @@ export const portfolioData = {
       categoryKey: "tools",
       skills: [
         { name: "Docker" },
-        { name: "Docker Compose" },
         { name: "Git" },
         { name: "GitHub" },
         { name: "Linux" },
@@ -288,7 +293,7 @@ export const portfolioData = {
     {
       categoryKey: "automation",
       skills: [
-        { name: "n8n" },
+        { name: "Python" },
       ]
     }
   ],
