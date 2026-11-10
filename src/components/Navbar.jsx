@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { useTheme } from '../context/ThemeContext';
-import { Sun, Moon, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 export const Navbar = () => {
   const { lang, setLang, t, personal } = useLanguage();
-  const { theme, toggleTheme, isDark } = useTheme();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
   const [scrolled, setScrolled] = useState(false);
@@ -136,21 +134,6 @@ export const Navbar = () => {
               EN
             </button>
           </div>
-
-          {/* Dark / Light Theme Toggle Button */}
-          <button
-            type="button"
-            onClick={toggleTheme}
-            aria-label={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-            title={isDark ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
-            className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800/80 border border-gray-200 dark:border-gray-700/60 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
-          >
-            {isDark ? (
-              <Sun className="w-4 h-4 text-amber-400 transition-transform rotate-0 hover:rotate-45" />
-            ) : (
-              <Moon className="w-4 h-4 text-indigo-600 transition-transform hover:-rotate-12" />
-            )}
-          </button>
 
           {/* Mobile Menu Toggle Button */}
           <button

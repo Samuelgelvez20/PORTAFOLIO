@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="dark" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,24 +9,11 @@
   <meta name="author" content="Samuel David Gelvez Rodríguez">
   <meta name="robots" content="index, follow">
 
-  <!-- Color scheme declaration -->
-  <meta name="color-scheme" content="light dark">
-
-  <!-- FOUC prevention script as per Modern Web Guidance -->
+  <!-- Permanent Dark Color Scheme for Starry Night Theme -->
+  <meta name="color-scheme" content="dark">
   <script>
-    try {
-      const savedTheme = localStorage.getItem("portfolio-theme");
-      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const isDark = savedTheme === "dark" || (!savedTheme && prefersDark);
-      if (isDark) {
-        document.documentElement.classList.add("dark");
-        document.documentElement.setAttribute("data-theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        document.documentElement.setAttribute("data-theme", "light");
-      }
-      document.querySelector('meta[name="color-scheme"]').content = isDark ? "dark" : "light";
-    } catch (e) {}
+    document.documentElement.classList.add("dark");
+    document.documentElement.setAttribute("data-theme", "dark");
   </script>
 
   <!-- Canonical URL -->
