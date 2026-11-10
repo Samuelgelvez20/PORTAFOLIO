@@ -1,172 +1,69 @@
-# 💼 Portafolio Personal - Samuel David Gelvez Rodríguez
+# 💼 Portafolio Profesional - Samuel David Gelvez Rodríguez
 
-> 🌐 **Ver portafolio en línea:**
-> **https://samuelgelvez20.github.io/PORTAFOLIO/**
+> 🌐 **Ver portafolio en línea:**  
+> **[samuelgelvez20.github.io/PORTAFOLIO](https://samuelgelvez20.github.io/PORTAFOLIO/)**
 
 ---
 
 ## 📖 Descripción
 
-Este repositorio contiene el código fuente de mi portafolio web personal, desarrollado para presentar mis proyectos, habilidades, objetivos profesionales y medios de contacto de forma moderna, accesible y totalmente responsive.
-
-El objetivo principal del proyecto fue construir un sitio web profesional que sirva como carta de presentación para oportunidades laborales en desarrollo de software.
+Portafolio web profesional de Samuel David Gelvez Rodríguez, Técnico en Desarrollo de Software y Desarrollador Full-Stack en Formación. Desarrollado con una arquitectura frontend moderna basada en **React**, **Tailwind CSS v4** y **Vite**, optimizado para alto rendimiento, accesibilidad y experiencia de usuario fluida.
 
 ---
 
-## ✨ Características
+## ✨ Características Principales
 
-* 🌍 Sitio bilingüe (Español / English)
-* 📱 Diseño completamente responsive
-* 🎨 Interfaz moderna con estilo Glassmorphism
-* ⚡ Animaciones suaves al hacer scroll
-* 🌙 Soporte para tema oscuro y claro mediante `prefers-color-scheme`
-* 🔍 Optimización SEO
-* 🖼️ Favicon y metadatos para compartir en redes sociales
-* 📄 Descarga del CV en español e inglés
-* 🚀 Publicado con GitHub Pages
-
----
-
-## 🛠️ Tecnologías utilizadas
-
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript (ES6)
-
-### Herramientas
-
-* Git
-* GitHub
-* GitHub Pages
-* Visual Studio Code
-
-
-### Diseño
-
-* Responsive Design
-* CSS Grid
-* Flexbox
-* Variables CSS
-* Glassmorphism
-* Animaciones CSS
-
-### Librerías
-
-* Lucide Icons (CDN)
+* ⚛️ **Arquitectura React & Modular:** Componentes limpios y desacoplados bajo React 19.
+* 🎨 **Tailwind CSS v4:** Diseño responsivo mobile-first con glassmorphism, gradientes modernos y tokens de diseño.
+* 🌓 **Selector de Tema Dinámico:** Modo Claro / Modo Oscuro manual y automático, con prevención de flash (FOUC) y persistencia en `localStorage`.
+* 🌍 **Bilingüe Fluido (ES / EN):** Sistema de internacionalización reactivo sin dependencias pesadas.
+* 🏷️ **Micro-Iconos Vectoriales:** Iconografía técnica oficial (Java, Python, PostgreSQL, MySQL, Docker, n8n, etc.).
+* 📋 **Interacciones Útiles:** Botón de un clic para copiar correo al portapapeles con feedback visual.
+* 🗂️ **Filtro de Proyectos:** Filtrado interactivo por categoría (Todos, Full-Stack & Web, Backend & BD, Escritorio).
+* 📄 **Descarga Dinámica de CV:** Enlace al CV que conmuta automáticamente entre la versión en español e inglés.
+* 🚀 **CI/CD con GitHub Actions:** Pipeline automatizado de compilación y despliegue a GitHub Pages.
 
 ---
 
-## 📂 Secciones del portafolio
+## 🛠️ Stack Tecnológico
 
-* 🏠 Inicio
-* 👨‍💻 Sobre mí
-* 🎯 Objetivos profesionales
-* 💡 Habilidades
-* 📁 Proyectos
-* 📬 Contacto
-* 📄 Descarga de CV
+* **Frontend:** React 19, Tailwind CSS v4, Lucide React
+* **Build Tool:** Vite 8 con `@tailwindcss/vite`
+* **Control de Versiones & CI/CD:** Git, GitHub, GitHub Actions & GitHub Pages
+* **Diseño & Accesibilidad:** Responsive Design, Semantic HTML5, WAI-ARIA, Dark/Light Mode Tokens
 
 ---
 
-## 📁 Proyectos destacados
+## 🚀 Cómo ejecutar el proyecto localmente
 
-### 🏎️ F1 Simulator
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/Samuelgelvez20/PORTAFOLIO.git
+   cd PORTAFOLIO
+   ```
 
-https://github.com/Samuelgelvez20/f1-simulator
+2. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-Simulador de sesiones de clasificación de Fórmula 1 desarrollado en Java (Swing): gestión de circuitos, pilotos, equipos y vehículos, con simulación concurrente y persistencia en PostgreSQL.
+3. **Iniciar el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+   Abre [http://localhost:5173](http://localhost:5173) en tu navegador.
 
-### 🛡️ Gestión SST-PESV
-
-https://github.com/Samuelgelvez20/Gestion-sst-pesv
-
-Base de datos relacional multi-tenant en PostgreSQL para la gestión de Salud y Seguridad en el Trabajo y Seguridad Vial, con funciones y procedimientos PL/pgSQL, triggers y vistas materializadas orquestadas con Docker Compose.
-
-### 🏦 Acmebank Web
-
-https://github.com/Samuelgelvez20/Acmebank_Web
-
-Portal de autogestión bancaria con registro, inicio de sesión, consignaciones, retiros y pagos de servicios, construido con HTML5, CSS3 y JavaScript.
-
-### 🍕 Pizzeria Don Piccolo
-
-https://github.com/Samuelgelvez20/pizzeria-don-piccolo
-
-Base de datos relacional en MySQL/MariaDB que cubre el proceso de venta de pizzas: clientes, catálogo, pedidos, repartidores y pagos, con funciones, procedimientos almacenados, triggers y vistas.
-
-### 🖥️ SICA-ZonaAcme
-
-https://github.com/Samuelgelvez20/SICA-ZonaAcme
-
-Aplicación de escritorio en Java con interfaz Swing sobre PostgreSQL, con control de acceso basado en roles (RBAC) y auditoría de operaciones, gestionada con Maven.
-
-### 👕 E-commerce App
-
-https://github.com/Samuelgelvez20/E-commers-App
-
-Frontend mobile-first para una tienda de ropa desarrollado con HTML5 y CSS3 nativo: catálogo con búsqueda y categorías, páginas de detalle de producto y checkout.
-
-> 📸 Las capturas de los proyectos se añadirán en `images/projects/`.
-
----
-
-## 🚀 Cómo ejecutar el proyecto
-
-1. Clonar el repositorio
-
-```bash
-git clone https://github.com/Samuelgelvez20/PORTAFOLIO.git
-```
-
-2. Entrar al proyecto
-
-```bash
-cd PORTAFOLIO
-```
-
-3. Abrir el archivo
-
-```text
-index.html
-```
-
-También puede utilizarse la extensión **Live Server** de Visual Studio Code.
-
----
-
-## 📸 Vista previa
-
-La versión publicada puede visitarse aquí:
-
-👉 https://samuelgelvez20.github.io/PORTAFOLIO/
-
----
-
-## 📈 Características técnicas
-
-* Arquitectura sencilla y mantenible.
-* Código organizado por responsabilidades.
-* Diseño mobile-first.
-* Traducciones dinámicas mediante JavaScript.
-* Persistencia del idioma seleccionado.
-* Optimización para Lighthouse.
-* Buenas prácticas de accesibilidad.
-* Optimización para motores de búsqueda (SEO).
+4. **Compilar para producción:**
+   ```bash
+   npm run build
+   ```
+   Los archivos optimizados se generarán en la carpeta `dist/`.
 
 ---
 
 ## 📬 Contacto
 
-📧 Correo: samueldavidgelvezr@gmail.com
-
-💼 LinkedIn: https://www.linkedin.com/in/samuelgelvezdev/
-
-🐙 GitHub: https://github.com/Samuelgelvez20
-
-🌐 Portafolio: https://samuelgelvez20.github.io/PORTAFOLIO/
-
----
-
-# Gracias por visitar este repositorio.
+* 📧 **Email:** [samueldavidgelvezr@gmail.com](mailto:samueldavidgelvezr@gmail.com)
+* 💼 **LinkedIn:** [linkedin.com/in/samuelgelvezdev](https://www.linkedin.com/in/samuelgelvezdev/)
+* 🐙 **GitHub:** [github.com/Samuelgelvez20](https://github.com/Samuelgelvez20)
+* 🌐 **Portafolio:** [samuelgelvez20.github.io/PORTAFOLIO](https://samuelgelvez20.github.io/PORTAFOLIO/)
