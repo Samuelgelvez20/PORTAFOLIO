@@ -112,7 +112,7 @@ export const portfolioData = {
         filterAll: "Todos",
         filterFullstack: "Full-Stack & Web",
         filterBackend: "Backend & BD",
-        filterDesktop: "Escritorio (Java)",
+        filterPython: "Python & IA",
         repoBtn: "Ver Repositorio",
         demoBtn: "Demo en Vivo",
         noDemoYet: "Demo en preparación",
@@ -129,7 +129,7 @@ export const portfolioData = {
         downloadCv: "Descargar CV",
       },
       footer: {
-        tagline: "Diseñado y desarrollado con React & Tailwind CSS por Samuel David Gelvez Rodríguez.",
+        tagline: "Técnico en Desarrollo De Software / Desarrollador Full-Stack Junior",
         rights: "Todos los derechos reservados.",
         backToTop: "Volver arriba",
       }
@@ -228,7 +228,7 @@ export const portfolioData = {
         filterAll: "All",
         filterFullstack: "Full-Stack & Web",
         filterBackend: "Backend & DB",
-        filterDesktop: "Desktop (Java)",
+        filterPython: "Python & AI",
         repoBtn: "View Repository",
         demoBtn: "Live Demo",
         noDemoYet: "Demo in progress",
@@ -245,7 +245,7 @@ export const portfolioData = {
         downloadCv: "Download CV",
       },
       footer: {
-        tagline: "Designed and built with React & Tailwind CSS by Samuel David Gelvez Rodríguez.",
+        tagline: "Software Development Technician / Junior Full-Stack Developer",
         rights: "All rights reserved.",
         backToTop: "Back to top",
       }
@@ -300,26 +300,60 @@ export const portfolioData = {
 
   projectsList: [
     {
-      id: "f1-simulator",
-      category: "desktop",
+      id: "renta-herramientas-construccion",
+      category: "fullstack",
       number: "01",
-      image: "images/projects/F1-simulator.png",
-      repoUrl: "https://github.com/Samuelgelvez20/f1-simulator",
+      image: "images/projects/RentaHerramientas.png",
+      repoUrl: "https://github.com/Samuelgelvez20/Plataforma-de-Renta-de-Herramientas-de-Construccion",
       demoUrl: null,
-      tags: ["Java", "Swing", "PostgreSQL", "JDBC", "Maven", "Docker"],
+      tags: ["Java", "Spring Boot", "React", "PostgreSQL", "Docker", "Maven"],
       es: {
-        title: "F1 Simulator",
-        description: "Simulador de sesiones de clasificación de Fórmula 1 desarrollado en Java Swing: gestión integral de circuitos, pilotos, escuderías y monoplazas, con simulación concurrente multihilo y persistencia relacional en PostgreSQL.",
+        title: "Plataforma de Renta de Maquinaria",
+        description: "Solución web empresarial integral para la gestión, reserva, despacho y facturación de equipos de construcción. Desarrollada con Java 21, Spring Boot (Arquitectura Hexagonal / DDD), frontend en React + TypeScript y PostgreSQL con migraciones Flyway.",
       },
       en: {
-        title: "F1 Simulator",
-        description: "Formula 1 qualifying session simulator developed in Java Swing: circuit, driver, team and car management, multi-threaded concurrent simulation engine, and relational PostgreSQL persistence.",
+        title: "Construction Equipment Rental Platform",
+        description: "Comprehensive enterprise web solution for managing, reserving, dispatching, and invoicing construction machinery. Built with Java 21, Spring Boot (Hexagonal Architecture / DDD), React + TypeScript frontend, and PostgreSQL with Flyway migrations.",
+      }
+    },
+    {
+      id: "tribunal-bimmer",
+      category: "python",
+      number: "02",
+      image: "images/projects/TribunalBimmer.png",
+      repoUrl: "https://github.com/Samuelgelvez20/Tribunal-Bimmer",
+      demoUrl: null,
+      tags: ["Python", "JSON", "Docker", "FastAPI", "LangChain"],
+      es: {
+        title: "Tribunal Bimmer",
+        description: "Sistema inteligente de análisis y clasificación de percepción para modelos BMW. Desarrollado en Python con FastAPI, validación con Pydantic, persistencia estructurada en JSON, flujos LangChain con Gemini/OpenAI e interfaz interactiva.",
+      },
+      en: {
+        title: "Tribunal Bimmer",
+        description: "Intelligent analysis and perception classification platform for BMW models. Engineered in Python with FastAPI, Pydantic schemas, structured JSON persistence, LangChain LLM pipelines, and an interactive web dashboard.",
+      }
+    },
+    {
+      id: "mindconnect-ddd",
+      category: "backend",
+      number: "03",
+      image: "images/projects/MindConnectDDD.png",
+      repoUrl: "https://github.com/Samuelgelvez20/mindconnect-ddd",
+      demoUrl: null,
+      tags: ["Java", "Spring Boot", "PostgreSQL", "Maven", "Spring Security"],
+      es: {
+        title: "MindConnect – Hexagonal & DDD",
+        description: "Backend empresarial modular con Maven multimódulo, Arquitectura Hexagonal y Domain-Driven Design (DDD). Integra autenticación y control de acceso con Spring Security, persistencia relacional JPA/PostgreSQL y migraciones automatizadas Flyway.",
+      },
+      en: {
+        title: "MindConnect – Hexagonal & DDD",
+        description: "Modular enterprise backend using multi-module Maven, Hexagonal Architecture, and Domain-Driven Design (DDD). Features authentication with Spring Security, JPA/PostgreSQL relational persistence, and automated Flyway migrations.",
       }
     },
     {
       id: "gestion-sst-pesv",
       category: "backend",
-      number: "02",
+      number: "04",
       image: "images/projects/Gestion-SST-PESV.png",
       repoUrl: "https://github.com/Samuelgelvez20/Gestion-sst-pesv",
       demoUrl: null,
@@ -334,12 +368,29 @@ export const portfolioData = {
       }
     },
     {
+      id: "procesamiento-de-datos",
+      category: "python",
+      number: "05",
+      image: "images/projects/ProcesamientoDatos.png",
+      repoUrl: "https://github.com/Samuelgelvez20/procesamiento-de-datos",
+      demoUrl: null,
+      tags: ["Python", "SQL", "MySQL", "RegEx", "ETL"],
+      es: {
+        title: "Procesamiento y Limpieza SQL",
+        description: "Pipeline automatizado en Python para reparar, normalizar y validar dumps SQL masivos con pérdida de codificación. Implementa heurísticas RegEx, reemplazo por diccionario y un autómata léxico para garantizar sintaxis e inserción sin errores.",
+      },
+      en: {
+        title: "SQL Data Processing & Cleaning",
+        description: "Automated Python pipeline designed to repair, normalize, and validate large corrupted SQL dumps. Uses RegEx heuristics, dictionary mapping, and a lexical automaton to guarantee error-free SQL syntax and execution.",
+      }
+    },
+    {
       id: "acmebank-web",
       category: "fullstack",
-      number: "03",
+      number: "06",
       image: "images/projects/AcmeBank.png",
       repoUrl: "https://github.com/Samuelgelvez20/Acmebank_Web",
-      demoUrl: "https://samuelgelvez20.github.io/Acmebank_Web/",
+      demoUrl: null,
       tags: ["HTML5", "CSS3", "JavaScript", "Web Components"],
       es: {
         title: "Acmebank Web",
@@ -348,57 +399,6 @@ export const portfolioData = {
       en: {
         title: "Acmebank Web",
         description: "Interactive online banking portal featuring user authentication, account creation, fund transfers, withdrawals, and utility bill payments with state stored in browser Web Storage.",
-      }
-    },
-    {
-      id: "pizzeria-don-piccolo",
-      category: "backend",
-      number: "04",
-      image: "images/projects/PizzeriaDonPiccolo.png",
-      repoUrl: "https://github.com/Samuelgelvez20/pizzeria-don-piccolo",
-      demoUrl: null,
-      tags: ["MySQL", "MariaDB", "SQL", "Triggers", "Stored Procedures"],
-      es: {
-        title: "Pizzeria Don Piccolo",
-        description: "Sistema de base de datos relacional para la gestión completa de pedidos y domicilios en una pizzería: clientes, catálogo dinámico de productos, asignación de repartidores, cálculo de facturación, triggers y procedimientos almacenados en MySQL/MariaDB.",
-      },
-      en: {
-        title: "Pizzeria Don Piccolo",
-        description: "Relational database system managing full pizza delivery operations: customer profiles, dynamic menu catalog, real-time driver dispatches, automated billing, stored procedures, and triggers in MySQL/MariaDB.",
-      }
-    },
-    {
-      id: "sica-zonaacme",
-      category: "desktop",
-      number: "05",
-      image: "images/projects/SICA-ZonaAcme.png",
-      repoUrl: "https://github.com/Samuelgelvez20/SICA-ZonaAcme",
-      demoUrl: null,
-      tags: ["Java", "Swing", "PostgreSQL", "Maven", "RBAC"],
-      es: {
-        title: "SICA - ZonaAcme",
-        description: "Aplicación de escritorio en Java Swing con conexión a PostgreSQL para la administración empresarial. Implementa control de acceso basado en roles (RBAC), registro riguroso de auditoría de operaciones y gestión de dependencias con Maven.",
-      },
-      en: {
-        title: "SICA - ZonaAcme",
-        description: "Enterprise administration desktop suite in Java Swing connected to PostgreSQL. Implements Role-Based Access Control (RBAC), user activity audit logging, and dependency management via Maven.",
-      }
-    },
-    {
-      id: "ecommerce-app",
-      category: "fullstack",
-      number: "06",
-      image: "images/projects/E-commerce-App.png",
-      repoUrl: "https://github.com/Samuelgelvez20/E-commers-App",
-      demoUrl: "https://samuelgelvez20.github.io/E-commers-App/",
-      tags: ["HTML5", "CSS3", "JavaScript", "Responsive Design"],
-      es: {
-        title: "E-commerce App",
-        description: "Tienda online de moda desarrollada con enfoque mobile-first: catálogo con búsqueda y filtrado interactivo por categorías, vistas de producto enriquecidas y flujo optimizado de carrito y checkout.",
-      },
-      en: {
-        title: "E-commerce App",
-        description: "Mobile-first responsive e-commerce storefront for apparel: searchable product catalog, category filters, interactive product detail pages, and a streamlined mobile checkout flow.",
       }
     }
   ]

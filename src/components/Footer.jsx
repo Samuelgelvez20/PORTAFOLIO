@@ -22,7 +22,7 @@ export const Footer = () => {
             >
               {personal.shortName}
             </a>
-            <p className="mt-1 text-xs sm:text-sm text-gray-400 max-w-sm">
+            <p className="mt-1 text-xs sm:text-sm text-gray-400 max-w-md">
               {t.footer.tagline}
             </p>
           </div>

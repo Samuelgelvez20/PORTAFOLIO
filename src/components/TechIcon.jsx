@@ -163,6 +163,31 @@ export const TechIcon = ({ name, className = "w-4 h-4" }) => {
         </svg>
       );
 
+    case 'fastapi':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#009688" />
+          <path d="M13 6l-5 7h4l-1 5 5-7h-4l1-5z" fill="#fff" />
+        </svg>
+      );
+
+    case 'springsecurity':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <path d="M12 2L4 5v6.09c0 5.05 3.41 9.76 8 10.91 4.59-1.15 8-5.86 8-10.91V5l-8-3z" fill="#6DB33F" />
+          <path d="M10.5 14.5l-2.5-2.5 1.1-1.1 1.4 1.4 3.4-3.4 1.1 1.1-4.5 4.5z" fill="#fff" />
+        </svg>
+      );
+
+    case 'sql':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="#38BDF8" strokeWidth="1.8">
+          <ellipse cx="12" cy="6" rx="7" ry="3" />
+          <path d="M5 6v6c0 1.66 3.13 3 7 3s7-1.34 7-3V6" />
+          <path d="M5 12v6c0 1.66 3.13 3 7 3s7-1.34 7-3v-6" />
+        </svg>
+      );
+
     default:
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

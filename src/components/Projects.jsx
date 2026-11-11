@@ -13,7 +13,7 @@ export const Projects = () => {
     { key: 'all', label: t.projects.filterAll },
     { key: 'fullstack', label: t.projects.filterFullstack },
     { key: 'backend', label: t.projects.filterBackend },
-    { key: 'desktop', label: t.projects.filterDesktop },
+    { key: 'python', label: t.projects.filterPython },
   ];
 
   const filteredProjects = portfolioData.projectsList.filter((project) => {
