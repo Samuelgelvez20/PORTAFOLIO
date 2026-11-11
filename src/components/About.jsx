@@ -94,7 +94,7 @@ export const About = () => {
               </p>
             </div>
 
-            {/* Languages Card - Redesigned to match cosmic dark glass aesthetic */}
+            {/* Languages Card */}
             <div className="p-6 rounded-2xl bg-slate-900/40 backdrop-blur-xl border border-white/10 shadow-xl shadow-black/40 card-glow">
               <div className="flex items-center justify-between mb-4 pb-2 border-b border-white/10">
                 <div className="flex items-center gap-2">
@@ -103,50 +103,27 @@ export const About = () => {
                     {t.about.languagesTitle}
                   </h3>
                 </div>
-                <span className="text-[11px] font-medium text-cyan-400 px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 tracking-wide">
+                <span className="text-[11px] font-mono font-semibold text-cyan-400 px-2 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/20 uppercase tracking-wider">
                   {lang === 'en' ? 'Bilingual' : 'Bilingüe'}
                 </span>
               </div>
 
-              <div className="space-y-2.5">
-                {/* Spanish */}
-                <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all">
-                  <div className="flex items-center gap-3">
-                    <span className="w-7 h-7 rounded-lg bg-blue-500/15 border border-blue-500/30 flex items-center justify-center text-[11px] font-bold text-blue-400 font-mono">
-                      ES
-                    </span>
-                    <div>
-                      <span className="text-xs sm:text-sm font-semibold text-white block">
-                        {lang === 'en' ? 'Spanish' : 'Español'}
-                      </span>
-                      <span className="text-[10px] sm:text-xs text-gray-400 block">
-                        {lang === 'en' ? 'Native Language' : 'Lengua Materna'}
-                      </span>
-                    </div>
-                  </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-400 border border-emerald-500/25">
+              <div className="space-y-4 pl-3 border-l-2 border-cyan-500/50">
+                <div>
+                  <h4 className="text-sm font-semibold text-white">
+                    {lang === 'en' ? 'Spanish' : 'Español'}
+                  </h4>
+                  <p className="text-xs text-gray-400 mt-0.5">
                     {lang === 'en' ? 'Native' : 'Nativo'}
-                  </span>
+                  </p>
                 </div>
-
-                {/* English */}
-                <div className="flex items-center justify-between p-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/20 transition-all">
-                  <div className="flex items-center gap-3">
-                    <span className="w-7 h-7 rounded-lg bg-purple-500/15 border border-purple-500/30 flex items-center justify-center text-[11px] font-bold text-purple-400 font-mono">
-                      EN
-                    </span>
-                    <div>
-                      <span className="text-xs sm:text-sm font-semibold text-white block">
-                        {lang === 'en' ? 'English' : 'Inglés'}
-                      </span>
-                      <span className="text-[10px] sm:text-xs text-gray-400 block">
-                        {lang === 'en' ? 'Technical & Conversational' : 'Técnico & Conversacional'}
-                      </span>
-                    </div>
-                  </div>
-                  <span className="px-2.5 py-0.5 rounded-full text-[11px] font-semibold bg-blue-500/15 text-blue-400 border border-blue-500/25 font-mono">
-                    B1
-                  </span>
+                <div>
+                  <h4 className="text-sm font-semibold text-white">
+                    {lang === 'en' ? 'English' : 'Inglés'}
+                  </h4>
+                  <p className="text-xs text-gray-400 mt-0.5">
+                    {lang === 'en' ? 'B1 • Technical & Conversational' : 'B1 • Técnico y Conversacional'}
+                  </p>
                 </div>
               </div>
             </div>
