@@ -78,7 +78,10 @@ export const Projects = () => {
                     <img
                       src={project.image}
                       alt={content.title}
+                      width="960"
+                      height="540"
                       loading="lazy"
+                      decoding="async"
                       className="w-full h-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
                     />
                     {/* Dark gradient overlay for contrast */}
@@ -121,6 +124,7 @@ export const Projects = () => {
                     href={project.repoUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label={`${t.projects.repoBtn}: ${content.title}`}
                     className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold text-white bg-white/5 hover:bg-white/10 hover:border-white/20 border border-white/10 transition-all hover:-translate-y-0.5 active:translate-y-0 shadow-sm"
                   >
                     <TechIcon name="github" className="w-4 h-4" />

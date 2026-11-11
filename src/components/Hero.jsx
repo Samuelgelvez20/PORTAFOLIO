@@ -107,6 +107,10 @@ export const Hero = () => {
                 <img
                   src={personal.avatar}
                   alt={personal.name}
+                  width="288"
+                  height="288"
+                  fetchPriority="high"
+                  decoding="async"
                   className="w-full h-full object-cover object-center transition-transform duration-700 hover:scale-105"
                   loading="eager"
                 />
