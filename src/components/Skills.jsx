@@ -5,18 +5,16 @@ import { TechIcon } from './TechIcon';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 export const Skills = () => {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const [sectionRef, isVisible] = useScrollReveal();
 
-  const softSkills = [
-    t.about.softSkillsList.split(' • ')
-  ].flat();
+  const softSkills = t.about.softSkillsList.split(' • ');
 
   return (
     <section
       id="skills"
       ref={sectionRef}
-      className={`py-16 md:py-24 border-t border-gray-200/80 dark:border-gray-800/80 reveal-init ${
+      className={`py-16 md:py-24 border-t border-white/10 reveal-init ${
         isVisible ? 'reveal-active' : ''
       }`}
     >
@@ -24,13 +22,13 @@ export const Skills = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400">
+          <span className="text-xs font-bold tracking-widest uppercase text-blue-400">
             {t.skills.tagline}
           </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             {t.skills.title}
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+          <p className="mt-3 text-sm sm:text-base text-gray-400">
             {t.skills.subtitle}
           </p>
         </div>
@@ -43,15 +41,15 @@ export const Skills = () => {
             return (
               <div
                 key={category.categoryKey}
-                className="p-6 rounded-2xl glass-panel border border-gray-200/80 dark:border-gray-800/80 card-glow flex flex-col justify-between"
+                className="p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between"
               >
                 <div>
-                  <div className="flex items-center justify-between mb-5 pb-2 border-b border-gray-200/60 dark:border-gray-800/60">
-                    <h3 className="font-bold text-gray-900 dark:text-white text-base">
+                  <div className="flex items-center justify-between mb-5 pb-2.5 border-b border-white/10">
+                    <h3 className="font-bold text-white text-base">
                       {categoryTitle}
                     </h3>
-                    <span className="text-[11px] font-mono text-gray-400 dark:text-gray-500">
-                      {category.skills.length} techs
+                    <span className="text-[11px] font-mono text-gray-400 px-2 py-0.5 rounded-full bg-white/5 border border-white/10">
+                      {category.skills.length} {category.skills.length === 1 ? 'tech' : 'techs'}
                     </span>
                   </div>
 
@@ -60,7 +58,7 @@ export const Skills = () => {
                     {category.skills.map((skill) => (
                       <div
                         key={skill.name}
-                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gray-100/80 dark:bg-gray-800/80 border border-gray-200/70 dark:border-gray-700/60 text-xs font-medium text-gray-800 dark:text-gray-200 hover:border-blue-500/50 hover:bg-white dark:hover:bg-gray-800 transition-all cursor-default hover:-translate-y-0.5"
+                        className="inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-500/40 text-xs font-medium text-gray-200 transition-all cursor-default hover:-translate-y-0.5"
                       >
                         <TechIcon name={skill.name} className="w-4 h-4 shrink-0" />
                         <span>{skill.name}</span>
@@ -73,14 +71,14 @@ export const Skills = () => {
           })}
 
           {/* Soft Skills Card */}
-          <div className="p-6 rounded-2xl glass-panel border border-gray-200/80 dark:border-gray-800/80 card-glow flex flex-col justify-between">
+          <div className="p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
             <div>
-              <div className="flex items-center justify-between mb-5 pb-2 border-b border-gray-200/60 dark:border-gray-800/60">
-                <h3 className="font-bold text-gray-900 dark:text-white text-base">
+              <div className="flex items-center justify-between mb-5 pb-2.5 border-b border-white/10">
+                <h3 className="font-bold text-white text-base">
                   {t.skills.categories.soft}
                 </h3>
-                <span className="text-[11px] font-mono text-gray-400 dark:text-gray-500">
-                  {softSkills.length} traits
+                <span className="text-[11px] font-mono text-purple-400 px-2 py-0.5 rounded-full bg-purple-500/10 border border-purple-500/20">
+                  {softSkills.length} {lang === 'en' ? 'traits' : 'destrezas'}
                 </span>
               </div>
 
@@ -88,7 +86,7 @@ export const Skills = () => {
                 {softSkills.map((trait) => (
                   <span
                     key={trait}
-                    className="inline-flex items-center px-3 py-1.5 rounded-lg bg-purple-50/70 dark:bg-purple-950/30 border border-purple-200/60 dark:border-purple-800/50 text-xs font-semibold text-purple-700 dark:text-purple-300"
+                    className="inline-flex items-center px-3 py-1.5 rounded-xl bg-purple-500/10 border border-purple-500/20 text-xs font-semibold text-purple-300"
                   >
                     {trait}
                   </span>

@@ -25,7 +25,7 @@ export const Contact = () => {
     <section
       id="contact"
       ref={sectionRef}
-      className={`py-16 md:py-24 border-t border-gray-200/80 dark:border-gray-800/80 reveal-init ${
+      className={`py-16 md:py-24 border-t border-white/10 reveal-init ${
         isVisible ? 'reveal-active' : ''
       }`}
     >
@@ -33,13 +33,13 @@ export const Contact = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-600 dark:text-blue-400">
+          <span className="text-xs font-bold tracking-widest uppercase text-blue-400">
             {t.contact.tagline}
           </span>
-          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+          <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
             {t.contact.title}
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-600 dark:text-gray-400">
+          <p className="mt-3 text-sm sm:text-base text-gray-400">
             {t.contact.description}
           </p>
         </div>
@@ -48,11 +48,11 @@ export const Contact = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
           
           {/* Card 1: WhatsApp */}
-          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-emerald-500/20 card-glow flex flex-col justify-between">
+          <div className="p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-emerald-500/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">
-                  Chat Rápido
+                  {lang === 'en' ? 'Quick Chat' : 'Chat Rápido'}
                 </span>
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
               </div>
@@ -79,11 +79,11 @@ export const Contact = () => {
           </div>
 
           {/* Card 2: Email */}
-          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-white/10 card-glow flex flex-col justify-between">
+          <div className="p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-blue-400">
-                  Canal Directo
+                  {lang === 'en' ? 'Direct Channel' : 'Canal Directo'}
                 </span>
                 <span className="w-2 h-2 rounded-full bg-blue-500"></span>
               </div>
@@ -125,11 +125,11 @@ export const Contact = () => {
           </div>
 
           {/* Card 3: LinkedIn */}
-          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-white/10 card-glow flex flex-col justify-between">
+          <div className="p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
-                  Red Profesional
+                  {lang === 'en' ? 'Professional Network' : 'Red Profesional'}
                 </span>
                 <span className="w-2 h-2 rounded-full bg-cyan-500"></span>
               </div>
@@ -156,11 +156,11 @@ export const Contact = () => {
           </div>
 
           {/* Card 4: GitHub */}
-          <div className="p-5 sm:p-6 rounded-2xl glass-panel border border-white/10 card-glow flex flex-col justify-between">
+          <div className="p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-purple-400">
-                  Código & Repos
+                  {lang === 'en' ? 'Code & Repos' : 'Código & Repos'}
                 </span>
                 <span className="w-2 h-2 rounded-full bg-purple-500"></span>
               </div>
