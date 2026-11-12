@@ -11,8 +11,7 @@ export const Projects = () => {
 
   const filterOptions = [
     { key: 'all', label: t.projects.filterAll },
-    { key: 'fullstack', label: t.projects.filterFullstack },
-    { key: 'backend', label: t.projects.filterBackend },
+    { key: 'java', label: t.projects.filterJava },
     { key: 'python', label: t.projects.filterPython },
   ];
 

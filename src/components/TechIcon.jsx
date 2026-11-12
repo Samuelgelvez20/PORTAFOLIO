@@ -188,6 +188,66 @@ export const TechIcon = ({ name, className = "w-4 h-4" }) => {
         </svg>
       );
 
+    case 'spring':
+    case 'springboot':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#6DB33F" />
+          <path d="M7 12c1-3 5-5 8-3s3 6 1 8-6 2-8 0" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
+        </svg>
+      );
+
+    case 'maven':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#C71A36" />
+          <path d="M6 16l6-8 6 8-3-2-3 2-3-2-3 2z" fill="#fff" />
+        </svg>
+      );
+
+    case 'hibernate':
+    case 'jpa':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#BCAE79" />
+          <path d="M8 7v10h2.5v-3.8h3V17H16V7h-2.5v3.7h-3V7H8z" fill="#fff" />
+        </svg>
+      );
+
+    case 'langchain':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#1C3C3C" />
+          <path d="M8 12h8M12 8l4 4-4 4" stroke="#22C55E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
+    case 'pydantic':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#E92063" />
+          <path d="M8 8h5a3 3 0 0 1 0 6H8v3h-2V8h2zm0 4h5a1 1 0 0 0 0-2H8v2z" fill="#fff" />
+        </svg>
+      );
+
+    case 'linux':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#FCC624" />
+          <circle cx="9" cy="9" r="1.5" fill="#000" />
+          <circle cx="15" cy="9" r="1.5" fill="#000" />
+          <path d="M12 11c-1 0-1.5 1-1.5 1h3s-.5-1-1.5-1zM9 16c1 1 5 1 6 0" stroke="#000" strokeWidth="1.5" strokeLinecap="round" />
+        </svg>
+      );
+
+    case 'pytest':
+      return (
+        <svg className={className} viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="12" r="10" fill="#0A9EDC" />
+          <path d="M7 12l3.5 3.5L17 8" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
+      );
+
     default:
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
