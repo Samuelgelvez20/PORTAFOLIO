@@ -1,5 +1,16 @@
 # 💼 Portafolio Profesional - Samuel David Gelvez Rodríguez
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Status-Completado-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Version-v1.0.0-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/React-19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/TailwindCSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/GitHub_Pages-222222?style=for-the-badge&logo=github-pages&logoColor=white" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
+</p>
+
+
 > 🌐 **Ver portafolio en línea:**  
 > **[samuelgelvez20.github.io/PORTAFOLIO](https://samuelgelvez20.github.io/PORTAFOLIO/)**
 
