@@ -70,7 +70,7 @@ export const Navbar = () => {
           : 'bg-transparent border-b border-transparent'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <div className="w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10 h-16 flex items-center justify-between">
         {/* Brand / Logo */}
         <a
           href="#hero"

@@ -22,7 +22,7 @@ export const Hero = () => {
 
   return (
     <section id="hero" className="relative pt-10 pb-20 md:pt-16 md:pb-28">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 md:gap-8">
           
           {/* Left Column: Information & Actions */}
@@ -63,12 +63,12 @@ export const Hero = () => {
             </div>
 
             {/* Description */}
-            <p className="mt-4 text-base text-gray-600 dark:text-gray-400 max-w-xl leading-relaxed anim-hero-3">
+            <p className="mt-4 text-base text-gray-600 dark:text-gray-400 max-w-2xl leading-relaxed anim-hero-3">
               {t.hero.description}
             </p>
 
             {/* Tech Badges with official brand SVGs */}
-            <div className="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-2 max-w-xl anim-hero-3">
+            <div className="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-2 max-w-2xl anim-hero-3">
               {heroTechnologies.map((tech) => (
                 <span
                   key={tech}
@@ -102,7 +102,7 @@ export const Hero = () => {
 
           {/* Right Column: Visual Avatar with Entrance */}
           <div className="relative anim-hero-avatar shrink-0">
-            <div className="relative w-44 h-44 sm:w-60 sm:h-60 md:w-72 md:h-72 rounded-full p-1.5 bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 shadow-2xl shadow-indigo-500/20 dark:shadow-purple-950/40">
+            <div className="relative w-44 h-44 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full p-1.5 bg-gradient-to-tr from-blue-500 via-indigo-500 to-purple-500 shadow-2xl shadow-indigo-500/20 dark:shadow-purple-950/40">
               <div className="w-full h-full rounded-full overflow-hidden bg-gray-100 dark:bg-gray-900 ring-4 ring-white/10">
                 <img
                   src={personal.avatar}

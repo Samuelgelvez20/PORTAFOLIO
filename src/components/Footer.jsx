@@ -11,7 +11,7 @@ export const Footer = () => {
 
   return (
     <footer className="py-12 border-t border-white/10 bg-[#05070c]/70 backdrop-blur-md">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-white/10">
           
           {/* Brand & info */}

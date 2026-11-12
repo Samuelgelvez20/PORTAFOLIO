@@ -15,7 +15,7 @@ export const About = () => {
         isVisible ? 'reveal-active' : ''
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Section Header */}
         <div className="text-center md:text-left mb-12">

@@ -29,7 +29,7 @@ export const Projects = () => {
         isVisible ? 'reveal-active' : ''
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10">
