@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Samuel David Gélvez Rodríguez — Software Engineer &amp; Backend Architect</title>
+<meta content="Portfolio and Showcase of Samuel David Gélvez Rodríguez: Software Engineer, Backend Developer, and Software Architecture specialist." name="description"/>
+
+<!-- Tailwind CSS CDN with forms and container queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        colors: {
+          void: '#05070d',
+          panel: '#0a0f1d',
+          subpanel: '#0f172a',
+          cyan: {
+            400: '#38bdf8',
+            500: '#0ea5e9',
+            bright: '#00f2fe'
+          },
+          accent: {
+            emerald: '#10b981',
+            indigo: '#6366f1',
+            violet: '#8b5cf6'
+          }
+        },
+        fontFamily: {
+          mono: ['JetBrains Mono', 'Fira Code', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+          sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif']
+        }
+      }
+    }
+  }
+</script>
+
+<!-- Google Fonts: Inter & JetBrains Mono -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+<!-- Font Awesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+<style data-purpose="custom-grid-and-animations">
+  /* Subtle background grid pattern */
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  }
+  
+  .glow-cyan {
+    box-shadow: 0 0 25px -5px rgba(0, 242, 254, 0.25);
+  }
+
+  .glow-indigo {
+    box-shadow: 0 0 25px -5px rgba(99, 102, 241, 0.25);
+  }
+
+  /* Terminal blinking cursor */
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  .cursor-terminal {
+    display: inline-block;
+    width: 9px;
+    height: 18px;
+    background-color: #38bdf8;
+    vertical-align: middle;
+    animation: cursor-blink 0.9s infinite;
+    margin-left: 2px;
+  }
+
+  /* 3D Tilt Card Base */
+  .tilt-card {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.15s ease-out, border-color 0.25s ease;
+    will-change: transform;
+  }
+
+  /* Interactive Spotlight Overlay following cursor */
+  .spotlight-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .spotlight-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: radial-gradient(
+      450px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(56, 189, 248, 0.35),
+      transparent 70%
+    );
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .spotlight-card:hover::before {
+    opacity: 1;
+  }
+
+  /* Ambient radial glow under cards */
+  .spotlight-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+      380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      rgba(56, 189, 248, 0.05),
+      transparent 80%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+  }
+  .spotlight-card:hover::after {
+    opacity: 1;
+  }
+
+  /* Smooth sheen effect */
+  .sheen-card {
+    position: relative;
+    overflow: hidden;
+  }
+  .sheen-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(56, 189, 248, 0.08), transparent);
+    transition: all 0.75s ease;
+    pointer-events: none;
+  }
+  .sheen-card:hover::before {
+    left: 150%;
+  }
+</style>
+</head>
+
+<body class="bg-void text-slate-300 font-sans antialiased selection:bg-cyan-500/20 selection:text-cyan-300 relative min-h-screen">
+
+<!-- Background decorative light gradients -->
+<div aria-hidden="true" class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+  <div class="absolute -top-40 left-1/4 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[140px]"></div>
+  <div class="absolute top-[40%] right-[-10%] w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[150px]"></div>
+  <div class="absolute bottom-10 left-10 w-[550px] h-[550px] bg-emerald-500/5 rounded-full blur-[160px]"></div>
+  <div class="absolute inset-0 bg-grid-pattern opacity-70"></div>
+</div>
+
+<div class="relative z-10 flex flex-col min-h-screen">
+
+  <!-- BEGIN: TopBar -->
+  <header class="sticky top-0 z-50 backdrop-blur-xl bg-void/80 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Live System Metric Indicator -->
+      <div class="flex items-center space-x-3 text-xs font-mono" data-purpose="system-health-badge">
+        <span class="relative flex h-2.5 w-2.5">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+        </span>
+        <span class="text-slate-400 hidden sm:inline">KERNEL:</span>
+        <span class="text-emerald-400 font-medium">DDD_ENGINE // OPERATIONAL</span>
+        <span class="text-slate-600 hidden md:inline">|</span>
+        <span class="text-slate-400 hidden md:inline" id="system-uptime-indicator">
+          <i class="fa-solid fa-bolt text-amber-400 mr-1"></i>LATENCY: <span id="dynamic-latency" class="text-slate-200">14ms</span>
+        </span>
+      </div>
+
+      <!-- Navigation Links -->
+      <nav class="flex items-center space-x-5 text-sm font-medium">
+        <a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#about">About</a>
+        <a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#focus">Focus</a>
+        <a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#stack">Tech Stack</a>
+        <a class="text-slate-400 hover:text-cyan-400 transition-colors" href="#projects">Projects</a>
+        <a class="px-3.5 py-1.5 rounded-lg border border-cyan-500/30 bg-cyan-950/30 text-cyan-300 hover:bg-cyan-500/20 hover:border-cyan-400 transition-all font-mono text-xs flex items-center gap-1.5 shadow-sm" href="mailto:samueldavidgelvezr@gmail.com">
+          <i class="fa-regular fa-paper-plane text-xs"></i> Connect
+        </a>
+      </nav>
+    </div>
+  </header>
+  <!-- END: TopBar -->
+
+  <!-- BEGIN: MainContent -->
+  <main class="flex-grow max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+
+    <!-- BEGIN: HeroIdentity -->
+    <section class="relative" data-purpose="hero-identity">
+      <div class="tilt-card spotlight-card sheen-card relative rounded-2xl border border-slate-800 bg-gradient-to-b from-panel/95 to-subpanel/60 p-6 sm:p-10 shadow-2xl backdrop-blur-xl">
+        <!-- Top decorative blueprint corners -->
+        <div class="absolute top-3 left-4 text-xs font-mono text-cyan-500/40 select-none">+</div>
+        <div class="absolute top-3 right-4 text-xs font-mono text-cyan-500/40 select-none">+</div>
+        <div class="absolute bottom-3 left-4 text-xs font-mono text-cyan-500/40 select-none">+</div>
+        <div class="absolute bottom-3 right-4 text-xs font-mono text-cyan-500/40 select-none">+</div>
+
+        <div class="flex flex-col space-y-4">
+          <div class="flex items-center space-x-2">
+            <span class="inline-flex items-center px-2.5 py-0.5 rounded text-[10px] font-mono tracking-widest uppercase bg-cyan-950/80 text-cyan-400 border border-cyan-800/60 font-semibold">
+              ENGINEERING IDENTITY
+            </span>
+            <span class="h-px flex-1 bg-gradient-to-r from-cyan-950 via-slate-800 to-transparent"></span>
+          </div>
+
+          <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white font-sans">
+            Samuel David Gélvez Rodríguez
+          </h1>
+
+          <!-- Dynamic Typewriter Title Loop -->
+          <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-sm sm:text-lg font-medium text-slate-300 min-h-[32px]">
+            <span class="text-slate-400 font-mono text-xs sm:text-sm select-none">&gt;&gt;</span>
+            <span id="typewriter-headline" class="text-cyan-400 font-mono font-bold tracking-tight"></span>
+            <span class="cursor-terminal"></span>
+          </div>
+
+          <!-- Static Terminal Motto -->
+          <div class="pt-2 font-mono text-xs sm:text-sm text-slate-400 flex items-center space-x-2">
+            <span class="text-cyan-500 select-none">&gt;</span>
+            <span class="text-slate-300">Building reliable systems. Engineering meaningful solutions.</span>
+          </div>
+        </div>
+
+        <!-- Quick Connect Badges -->
+        <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-wrap items-center gap-3">
+          <a class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/60 text-xs font-mono text-slate-300 hover:text-white hover:border-slate-500 hover:bg-slate-800 transition-all" href="https://github.com/Samuelgelvez20" rel="noopener noreferrer" target="_blank">
+            <i class="fa-brands fa-github text-sm text-slate-400"></i>
+            <span>GitHub</span>
+            <span class="text-cyan-400 font-semibold">Samuelgelvez20</span>
+          </a>
+          <a class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/60 text-xs font-mono text-slate-300 hover:text-white hover:border-blue-500/50 hover:bg-slate-800 transition-all" href="https://linkedin.com/in/samuelgelvezdev" rel="noopener noreferrer" target="_blank">
+            <i class="fa-brands fa-linkedin text-sm text-blue-400"></i>
+            <span>LinkedIn</span>
+            <span class="text-blue-300 font-semibold">samuelgelvezdev</span>
+          </a>
+          <a class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-slate-900 border border-slate-700/60 text-xs font-mono text-slate-300 hover:text-white hover:border-rose-500/50 hover:bg-slate-800 transition-all" href="mailto:samueldavidgelvezr@gmail.com">
+            <i class="fa-regular fa-envelope text-sm text-rose-400"></i>
+            <span>Email</span>
+            <span class="text-slate-300">samueldavidgelvezr@gmail.com</span>
+          </a>
+          <a class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-lg bg-cyan-950/40 border border-cyan-800/50 text-xs font-mono text-cyan-300 hover:bg-cyan-900/40 hover:border-cyan-600 transition-all" href="https://samuelgelvez20.github.io/PORTAFOLIO/" target="_blank">
+            <i class="fa-solid fa-code-branch text-xs text-cyan-400"></i>
+            <span>Portfolio</span>
+            <span class="text-white font-semibold">Interactive Showcase</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- END: HeroIdentity -->
+
+    <!-- BEGIN: AboutMe -->
+    <section class="space-y-4" data-purpose="about-me" id="about">
+      <div class="flex items-center space-x-3">
+        <div class="w-2 h-6 bg-cyan-500 rounded-sm"></div>
+        <h2 class="text-2xl font-bold tracking-tight text-white font-sans">About Me</h2>
+      </div>
+
+      <div class="tilt-card spotlight-card rounded-xl border border-slate-800/90 bg-panel/75 p-6 sm:p-7 text-slate-300 leading-relaxed space-y-4 text-base backdrop-blur-md">
+        <p>
+          I am a <strong class="text-white font-semibold">Software Engineer</strong> focused on backend development, system architecture, and building reliable, maintainable software systems. My engineering foundation is centered on decoupling business logic from infrastructure, designing robust RESTful APIs, and implementing clean data persistence models.
+        </p>
+        <p>
+          I regularly work with <span class="text-cyan-300 font-mono font-medium">Java (Spring Boot)</span> and <span class="text-cyan-300 font-mono font-medium">Python (FastAPI)</span>, applying <strong class="text-white font-medium">Domain-Driven Design (DDD)</strong>, <strong class="text-white font-medium">Hexagonal Architecture</strong>, and <strong class="text-white font-medium">SOLID</strong> principles. In addition to core backend services, I design and integrate AI evaluation workflows and containerized environments with <span class="text-cyan-300 font-mono font-medium">Docker</span>, ensuring reproducible execution and measurable software quality.
+        </p>
+
+        <!-- Core architecture pillars highlight -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-800/80">
+          <div class="bg-subpanel/60 p-3 rounded-lg border border-slate-800 text-center hover:border-cyan-500/40 transition-colors">
+            <div class="text-cyan-400 font-mono font-bold text-lg">DDD / Hex</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">Architecture</div>
+          </div>
+          <div class="bg-subpanel/60 p-3 rounded-lg border border-slate-800 text-center hover:border-emerald-500/40 transition-colors">
+            <div class="text-emerald-400 font-mono font-bold text-lg">Zero-Coupling</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">Domain Core</div>
+          </div>
+          <div class="bg-subpanel/60 p-3 rounded-lg border border-slate-800 text-center hover:border-indigo-500/40 transition-colors">
+            <div class="text-indigo-400 font-mono font-bold text-lg">Contract-First</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">API Design</div>
+          </div>
+          <div class="bg-subpanel/60 p-3 rounded-lg border border-slate-800 text-center hover:border-amber-500/40 transition-colors">
+            <div class="text-amber-400 font-mono font-bold text-lg">LCEL / LLM</div>
+            <div class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5">AI Pipelines</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: AboutMe -->
+
+    <!-- BEGIN: EngineeringFocus -->
+    <section class="space-y-4" data-purpose="engineering-focus" id="focus">
+      <div class="flex items-center space-x-3">
+        <div class="w-2 h-6 bg-indigo-500 rounded-sm"></div>
+        <h2 class="text-2xl font-bold tracking-tight text-white font-sans">Engineering Focus</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Backend Architecture -->
+        <div class="tilt-card spotlight-card p-5 rounded-xl border border-slate-800/80 bg-panel/70 hover:border-cyan-500/40 transition-all">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-9 h-9 rounded-lg bg-cyan-950/70 border border-cyan-800/60 flex items-center justify-center text-cyan-400 flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-cubes-stacked text-base"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white text-base">Backend Architecture</h3>
+              <p class="text-sm text-slate-400 mt-1 leading-snug">
+                Hexagonal Architecture (Ports and Adapters), Domain-Driven Design (DDD), and strict boundary isolation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- API Engineering -->
+        <div class="tilt-card spotlight-card p-5 rounded-xl border border-slate-800/80 bg-panel/70 hover:border-indigo-500/40 transition-all">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-9 h-9 rounded-lg bg-indigo-950/70 border border-indigo-800/60 flex items-center justify-center text-indigo-400 flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-network-wired text-base"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white text-base">API Engineering</h3>
+              <p class="text-sm text-slate-400 mt-1 leading-snug">
+                Contract-first RESTful API design, strict runtime data validation, and asynchronous processing.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & Persistence -->
+        <div class="tilt-card spotlight-card p-5 rounded-xl border border-slate-800/80 bg-panel/70 hover:border-emerald-500/40 transition-all">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-9 h-9 rounded-lg bg-emerald-950/70 border border-emerald-800/60 flex items-center justify-center text-emerald-400 flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-database text-base"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white text-base">Data &amp; Persistence</h3>
+              <p class="text-sm text-slate-400 mt-1 leading-snug">
+                Relational schema design with PostgreSQL and MySQL, transactional integrity, and Redis caching.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Integration -->
+        <div class="tilt-card spotlight-card p-5 rounded-xl border border-slate-800/80 bg-panel/70 hover:border-purple-500/40 transition-all">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-9 h-9 rounded-lg bg-purple-950/70 border border-purple-800/60 flex items-center justify-center text-purple-400 flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-microchip text-base"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white text-base">AI Integration</h3>
+              <p class="text-sm text-slate-400 mt-1 leading-snug">
+                Semantic evaluation pipelines, prompt engineering with LCEL, and structured LLM outputs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infrastructure & Quality (Full width card) -->
+        <div class="md:col-span-2 tilt-card spotlight-card p-5 rounded-xl border border-slate-800/80 bg-panel/70 hover:border-sky-500/40 transition-all">
+          <div class="flex items-start space-x-3.5">
+            <div class="w-9 h-9 rounded-lg bg-sky-950/70 border border-sky-800/60 flex items-center justify-center text-sky-400 flex-shrink-0 mt-0.5">
+              <i class="fa-solid fa-boxes-packing text-base"></i>
+            </div>
+            <div>
+              <h3 class="font-semibold text-white text-base">Infrastructure &amp; Quality</h3>
+              <p class="text-sm text-slate-400 mt-1 leading-snug">
+                Container orchestration with Docker Compose, automated testing suites, and Linux environments for reproducible software delivery.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: EngineeringFocus -->
+
+    <!-- BEGIN: TechStack -->
+    <section class="space-y-6" data-purpose="tech-stack-overview" id="stack">
+      <div class="flex items-center space-x-3">
+        <div class="w-2 h-6 bg-cyan-400 rounded-sm"></div>
+        <h2 class="text-2xl font-bold tracking-tight text-white font-sans">Tech Stack</h2>
+      </div>
+
+      <div class="space-y-6">
+        <!-- Languages -->
+        <div class="space-y-2">
+          <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-400"></span> Languages
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-orange-500/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-brands fa-java text-2xl text-orange-400 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">Java 21</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-yellow-500/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-brands fa-python text-2xl text-yellow-400 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">Python</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900 transition-all group">
+              <span class="text-base font-bold font-mono text-blue-400 bg-blue-950 px-1.5 py-0.5 rounded border border-blue-800 group-hover:scale-110 transition-transform">TS</span>
+              <span class="text-sm font-medium text-slate-200">TypeScript</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-yellow-400/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-brands fa-js text-2xl text-yellow-300 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">JavaScript</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-sky-500/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-solid fa-code text-lg text-sky-400 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">SQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="space-y-2">
+          <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Backend Frameworks &amp; Runtimes
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-900 transition-all group">
+              <div class="w-6 h-6 rounded-full bg-emerald-950 flex items-center justify-center text-emerald-400 border border-emerald-700/60 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-leaf text-xs"></i>
+              </div>
+              <div>
+                <span class="text-sm font-medium text-slate-200">Spring Boot</span>
+                <span class="text-[10px] text-emerald-400 block font-mono">v3.x / Java 21</span>
+              </div>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-teal-500/50 hover:bg-slate-900 transition-all group">
+              <div class="w-6 h-6 rounded-full bg-teal-950 flex items-center justify-center text-teal-400 border border-teal-700/60 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-bolt text-xs"></i>
+              </div>
+              <div>
+                <span class="text-sm font-medium text-slate-200">FastAPI</span>
+                <span class="text-[10px] text-teal-400 block font-mono">Python 3.11</span>
+              </div>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-indigo-500/50 hover:bg-slate-900 transition-all group">
+              <div class="w-6 h-6 rounded-full bg-indigo-950 flex items-center justify-center text-indigo-400 border border-indigo-700/60 group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-gears text-xs"></i>
+              </div>
+              <div>
+                <span class="text-sm font-medium text-slate-200">RESTful APIs</span>
+                <span class="text-[10px] text-indigo-400 block font-mono">Contract-First</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases & Infrastructure -->
+        <div class="space-y-2">
+          <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Databases &amp; Infrastructure
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-sky-500/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-solid fa-database text-xl text-sky-400 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">PostgreSQL</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-red-500/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-solid fa-layer-group text-xl text-rose-500 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">Redis Caching</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-blue-500/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-brands fa-docker text-2xl text-blue-400 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">Docker &amp; Compose</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-yellow-500/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-brands fa-linux text-xl text-amber-300 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">Linux CLI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend & Tooling -->
+        <div class="space-y-2">
+          <h3 class="text-xs font-mono uppercase tracking-wider text-slate-400 font-semibold flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-cyan-300"></span> Client-Side &amp; Ecosystem
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-cyan-400/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-brands fa-react text-2xl text-cyan-400 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">React</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-slate-500/50 hover:bg-slate-900 transition-all group">
+              <span class="font-mono text-sm font-bold text-white bg-slate-800 px-1.5 py-0.5 rounded">N</span>
+              <span class="text-sm font-medium text-slate-200">Next.js</span>
+            </div>
+            <div class="tilt-card spotlight-card flex items-center space-x-2.5 px-4 py-2.5 rounded-xl bg-panel border border-slate-800 hover:border-teal-400/50 hover:bg-slate-900 transition-all group">
+              <i class="fa-solid fa-wind text-xl text-teal-400 group-hover:scale-110 transition-transform"></i>
+              <span class="text-sm font-medium text-slate-200">Tailwind CSS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END: TechStack -->
+
+    <!-- BEGIN: FeaturedProjects -->
+    <section class="space-y-8" data-purpose="featured-projects" id="projects">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="w-2 h-6 bg-cyan-bright rounded-sm"></div>
+          <h2 class="text-2xl font-bold tracking-tight text-white font-sans">Featured Projects</h2>
+        </div>
+        <span class="text-xs font-mono text-slate-500 hidden sm:inline">ARCHITECTURAL PRODUCTION SUITE</span>
+      </div>
+
+      <div class="space-y-12">
+        <!-- PROJECT 1: Evaluador-Tecnico -->
+        <article class="tilt-card spotlight-card rounded-2xl border border-slate-800/90 bg-panel overflow-hidden shadow-2xl transition-all" data-purpose="project-evaluador-tecnico">
+          <!-- Project Header -->
+          <div class="p-6 sm:p-7 border-b border-slate-800/80 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-semibold uppercase tracking-wider text-cyan-400">01. Production Pipeline</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-950 text-cyan-300 border border-cyan-800/50">AI &amp; Asynchronous Backend</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white tracking-tight">Evaluador-Tecnico</h3>
+            <p class="text-sm font-mono text-cyan-300 font-medium">AI-Assisted Candidate Evaluation &amp; Backend Architecture</p>
+            <p class="text-sm text-slate-300 pt-1 leading-relaxed">
+              A structured technical evaluation platform designed to assess engineering candidates through automated workflows, code execution sandboxing, and AI-assisted scoring pipelines.
+            </p>
+          </div>
+
+          <!-- Architecture Terminal Spec Box -->
+          <div class="bg-void/90 p-5 font-mono text-xs border-b border-slate-800/80 text-slate-300 leading-relaxed overflow-x-auto">
+            <div class="text-slate-500 select-none pb-2">// SYSTEM ARCHITECTURE SPECIFICATION</div>
+            <div class="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1 sm:gap-2">
+              <span class="text-cyan-400 font-semibold">Architecture</span>
+              <span class="text-slate-300">: Microservices / Modular Backend with Asynchronous Task Queues</span>
+              <span class="text-cyan-400 font-semibold">Tech Stack</span>
+              <span class="text-slate-300">: Python, FastAPI, PostgreSQL, Redis, Docker, LLM Integrations</span>
+              <span class="text-cyan-400 font-semibold">Core Focus</span>
+              <span class="text-slate-300">: Strict schema validation, background job processing, reproducible candidate metrics</span>
+            </div>
+          </div>
+
+          <!-- Project Visual Showcase -->
+          <div class="p-6 bg-subpanel/50 space-y-4">
+            <div class="relative rounded-xl overflow-hidden border border-slate-800 shadow-xl group bg-void">
+              <img src="assets/projects/evaluador-tecnico.png" alt="Evaluador-Tecnico Dashboard" class="w-full object-cover rounded-lg group-hover:scale-[1.01] transition-transform duration-500" />
+            </div>
+
+            <!-- Project Links & References -->
+            <div class="flex flex-wrap items-center gap-4 pt-2 text-xs font-mono">
+              <a class="text-cyan-400 hover:text-cyan-300 flex items-center space-x-1.5 hover:underline" href="https://github.com/Cristixn04/Evaluador-Tecnico" rel="noopener noreferrer" target="_blank">
+                <i class="fa-brands fa-github text-sm"></i>
+                <span>Repository: Evaluador-Tecnico on GitHub</span>
+              </a>
+              <span class="text-slate-600">•</span>
+              <span class="text-slate-400">Associated Engine: <a href="https://github.com/Samuelgelvez20/CVLens-AI" class="text-slate-200 font-semibold hover:text-cyan-400" target="_blank">CVLens-AI Evaluation Engine</a></span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 2: MindConnect DDD -->
+        <article class="tilt-card spotlight-card rounded-2xl border border-slate-800/90 bg-panel overflow-hidden shadow-2xl transition-all" data-purpose="project-mindconnect-ddd">
+          <!-- Project Header -->
+          <div class="p-6 sm:p-7 border-b border-slate-800/80 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-semibold uppercase tracking-wider text-emerald-400">02. Enterprise Core</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-950 text-emerald-300 border border-emerald-800/50">DDD &amp; Hexagonal Architecture</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white tracking-tight">MindConnect DDD</h3>
+            <p class="text-sm font-mono text-emerald-300 font-medium">Domain-Driven Design Enterprise Platform</p>
+            <p class="text-sm text-slate-300 pt-1 leading-relaxed">
+              An enterprise software architecture project centered on Domain-Driven Design (DDD) and Hexagonal Architecture principles. It enforces strict boundary separation between ubiquitous domain language, application use cases, and infrastructure adapters.
+            </p>
+          </div>
+
+          <!-- Architecture Terminal Spec Box -->
+          <div class="bg-void/90 p-5 font-mono text-xs border-b border-slate-800/80 text-slate-300 leading-relaxed overflow-x-auto">
+            <div class="text-slate-500 select-none pb-2">// HEXAGONAL LAYER SPECIFICATION</div>
+            <div class="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1 sm:gap-2">
+              <span class="text-emerald-400 font-semibold">Architecture</span>
+              <span class="text-slate-300">: Domain-Driven Design (DDD), Hexagonal Architecture (Ports &amp; Adapters)</span>
+              <span class="text-emerald-400 font-semibold">Tech Stack</span>
+              <span class="text-slate-300">: Java 21, Spring Boot, PostgreSQL, Docker, Maven, Spring Security</span>
+              <span class="text-emerald-400 font-semibold">Core Focus</span>
+              <span class="text-slate-300">: Entity aggregates, value objects, transactional domain events, infrastructure decoupling</span>
+            </div>
+          </div>
+
+          <!-- Project Visual Showcase -->
+          <div class="p-6 bg-subpanel/50 space-y-4">
+            <div class="relative rounded-xl overflow-hidden border border-slate-800 shadow-xl group bg-void">
+              <img src="assets/projects/mindconnect-ddd.jpg" alt="MindConnect DDD Architecture" class="w-full object-cover rounded-lg group-hover:scale-[1.01] transition-transform duration-500" />
+            </div>
+
+            <!-- Project Links & References -->
+            <div class="flex flex-wrap items-center gap-4 pt-2 text-xs font-mono">
+              <a class="text-emerald-400 hover:text-emerald-300 flex items-center space-x-1.5 hover:underline" href="https://github.com/Samuelgelvez20/mindconnect-ddd" rel="noopener noreferrer" target="_blank">
+                <i class="fa-brands fa-github text-sm"></i>
+                <span>Repository: mindconnect-ddd on GitHub</span>
+              </a>
+              <span class="text-slate-600">•</span>
+              <span class="text-slate-400 italic font-sans">(Verified architectural codebase)</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- PROJECT 3: Tribunal Bimmer -->
+        <article class="tilt-card spotlight-card rounded-2xl border border-slate-800/90 bg-panel overflow-hidden shadow-2xl transition-all" data-purpose="project-tribunal-bimmer">
+          <!-- Project Header -->
+          <div class="p-6 sm:p-7 border-b border-slate-800/80 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-xs font-semibold uppercase tracking-wider text-indigo-400">03. Deterministic Intelligence</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-950 text-indigo-300 border border-indigo-800/50">Semantic Inference &amp; Analytics</span>
+            </div>
+            <h3 class="text-2xl font-bold text-white tracking-tight">Tribunal Bimmer</h3>
+            <p class="text-sm font-mono text-indigo-300 font-medium">Automotive Sentiment Analysis &amp; Runtime Intelligence</p>
+            <p class="text-sm text-slate-300 pt-1 leading-relaxed">
+              An analytical platform and RESTful service designed to process, classify, and evaluate vehicle perception data for BMW automotive models with high determinism.
+            </p>
+          </div>
+
+          <!-- Architecture Terminal Spec Box -->
+          <div class="bg-void/90 p-5 font-mono text-xs border-b border-slate-800/80 text-slate-300 leading-relaxed overflow-x-auto">
+            <div class="text-slate-500 select-none pb-2">// RUNTIME ARCHITECTURE SPECIFICATION</div>
+            <div class="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-1 sm:gap-2">
+              <span class="text-indigo-400 font-semibold">Architecture</span>
+              <span class="text-slate-300">: Decoupled API Service with Deterministic Semantic Inference</span>
+              <span class="text-indigo-400 font-semibold">Tech Stack</span>
+              <span class="text-slate-300">: Python 3.11, FastAPI, LangChain (LCEL), Pydantic v2, Pytest, React, Tailwind CSS</span>
+              <span class="text-indigo-400 font-semibold">Core Focus</span>
+              <span class="text-slate-300">: Few-shot prompt engineering, prompt injection defense, automated test suites</span>
+            </div>
+          </div>
+
+          <!-- Terminal output demo simulation -->
+          <div class="p-6 bg-subpanel/50 space-y-4">
+            <div class="rounded-xl bg-void border border-slate-800 p-4 font-mono text-xs text-slate-300 space-y-2">
+              <div class="flex items-center justify-between border-b border-slate-800 pb-2 text-slate-400">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-terminal text-cyan-400 text-xs"></i> Inference Output Stream</span>
+                <span class="text-emerald-400">STATUS 200 OK</span>
+              </div>
+              <div class="text-slate-400 pt-1">
+                <span class="text-indigo-400">&gt; Payload analysis:</span> "BMW M3 Competition (G80) suspension damping response across track modes"
+              </div>
+              <div class="bg-panel/80 p-3 rounded border border-slate-800/80 space-y-1 text-[11px]">
+                <p class="text-emerald-400">{</p>
+                <p class="pl-4 text-slate-300"><span class="text-cyan-300">"sentiment_score"</span>: <span class="text-amber-300">0.942</span>,</p>
+                <p class="pl-4 text-slate-300"><span class="text-cyan-300">"semantic_tag"</span>: <span class="text-emerald-300">"DYNAMIC_PERFORMANCE_EXCELLENCE"</span>,</p>
+                <p class="pl-4 text-slate-300"><span class="text-cyan-300">"confidence_interval"</span>: <span class="text-amber-300">0.991</span>,</p>
+                <p class="pl-4 text-slate-300"><span class="text-cyan-300">"latency_eval_ms"</span>: <span class="text-amber-300">42</span></p>
+                <p class="text-emerald-400">}</p>
+              </div>
+            </div>
+
+            <!-- Project Links & References -->
+            <div class="flex flex-wrap items-center gap-4 pt-2 text-xs font-mono">
+              <a class="text-indigo-400 hover:text-indigo-300 flex items-center space-x-1.5 hover:underline" href="https://github.com/Samuelgelvez20/Tribunal-Bimmer" rel="noopener noreferrer" target="_blank">
+                <i class="fa-brands fa-github text-sm"></i>
+                <span>Repository: Tribunal-Bimmer on GitHub</span>
+              </a>
+              <span class="text-slate-600">•</span>
+              <span class="text-slate-400">Pydantic v2 Contract Validation Enabled</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- END: FeaturedProjects -->
+
+    <!-- BEGIN: CallToAction -->
+    <section class="tilt-card spotlight-card rounded-2xl border border-cyan-500/20 bg-gradient-to-r from-panel via-subpanel to-panel p-8 text-center space-y-6" data-purpose="contact-and-action">
+      <div class="max-w-2xl mx-auto space-y-3">
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Ready to architect high-reliability software?</h2>
+        <p class="text-sm text-slate-400 leading-relaxed">
+          Whether designing domain-driven architectures, building contract-first backends, or orchestrating resilient containerized workloads, let's connect.
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-4 font-mono text-xs">
+        <a class="px-5 py-3 rounded-xl bg-cyan-500 text-void font-bold hover:bg-cyan-400 transition-all shadow-lg flex items-center gap-2" href="mailto:samueldavidgelvezr@gmail.com">
+          <i class="fa-regular fa-paper-plane"></i>
+          <span>samueldavidgelvezr@gmail.com</span>
+        </a>
+        <a class="px-5 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-slate-500 text-white font-medium transition-all flex items-center gap-2" href="https://github.com/Samuelgelvez20" rel="noopener noreferrer" target="_blank">
+          <i class="fa-brands fa-github"></i>
+          <span>GitHub Profile</span>
+        </a>
+        <a class="px-5 py-3 rounded-xl bg-slate-900 border border-slate-700 hover:border-blue-500/50 text-white font-medium transition-all flex items-center gap-2" href="https://linkedin.com/in/samuelgelvezdev" rel="noopener noreferrer" target="_blank">
+          <i class="fa-brands fa-linkedin text-blue-400"></i>
+          <span>LinkedIn Network</span>
+        </a>
+      </div>
+    </section>
+    <!-- END: CallToAction -->
+
+  </main>
+  <!-- END: MainContent -->
+
+  <!-- BEGIN: Footer -->
+  <footer class="border-t border-slate-800/80 bg-void/90 py-8 mt-12 text-center text-xs font-mono text-slate-500">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p class="text-slate-400">
+        Designed &amp; Engineered by <span class="text-white font-medium">Samuel David Gélvez Rodríguez</span>
+      </p>
+      <p class="text-slate-600">
+        Backend Architecture • Domain-Driven Design • Java Spring Boot • Python FastAPI
+      </p>
+    </div>
+  </footer>
+  <!-- END: Footer -->
+
+</div>
+
+<!-- INTERACTIVE SCRIPTS: Typewriter + 3D Card Cursor Movement -->
+<script>
+  // ==========================================
+  // 1. DYNAMIC TYPEWRITER EFFECT
+  // ==========================================
+  const typewriterPhrases = [
+    "Software Engineer",
+    "Backend Developer",
+    "Software Architecture Specialist",
+    "Java 21 & Spring Boot Architect",
+    "Python & FastAPI Performance Engineer",
+    "Domain-Driven Design (DDD) & Hexagonal",
+    "Distributed Systems & Resilient APIs"
+  ];
+
+  const headlineEl = document.getElementById("typewriter-headline");
+  let phraseIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  let typingSpeed = 90;
+
+  function typeWriter() {
+    const currentPhrase = typewriterPhrases[phraseIndex];
+
+    if (isDeleting) {
+      headlineEl.textContent = currentPhrase.substring(0, charIndex - 1);
+      charIndex--;
+      typingSpeed = 40;
+    } else {
+      headlineEl.textContent = currentPhrase.substring(0, charIndex + 1);
+      charIndex++;
+      // Humanized slight speed variance
+      typingSpeed = 80 + Math.random() * 40;
+    }
+
+    if (!isDeleting && charIndex === currentPhrase.length) {
+      // Pause at full word
+      typingSpeed = 1900;
+      isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
+      typingSpeed = 450;
+    }
+
+    setTimeout(typeWriter, typingSpeed);
+  }
+
+  // ==========================================
+  // 2. 3D TILT & CURSOR-TRACKING SPOTLIGHT
+  // ==========================================
+  function init3DTiltAndSpotlight() {
+    const cards = document.querySelectorAll(".tilt-card");
+
+    cards.forEach(card => {
+      let bounds;
+      let mouseX = 0;
+      let mouseY = 0;
+      let isHovered = false;
+
+      function updateBounds() {
+        bounds = card.getBoundingClientRect();
+      }
+
+      function onMouseEnter() {
+        isHovered = true;
+        updateBounds();
+      }
+
+      function onMouseMove(e) {
+        if (!bounds) updateBounds();
+        const x = e.clientX - bounds.left;
+        const y = e.clientY - bounds.top;
+
+        // Set CSS variables for radial spotlight
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+
+        // Compute 3D rotation angles (-6deg to +6deg)
+        const xPercent = (x / bounds.width) - 0.5;
+        const yPercent = (y / bounds.height) - 0.5;
+
+        const rotateX = (-yPercent * 8).toFixed(2);
+        const rotateY = (xPercent * 8).toFixed(2);
+
+        // Apply smooth 3D tilt with depth
+        card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+      }
+
+      function onMouseLeave() {
+        isHovered = false;
+        // Smoothly snap back
+        card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)";
+      }
+
+      card.addEventListener("mouseenter", onMouseEnter);
+      card.addEventListener("mousemove", onMouseMove);
+      card.addEventListener("mouseleave", onMouseLeave);
+      window.addEventListener("resize", updateBounds);
+    });
+  }
+
+  // ==========================================
+  // 3. LIVE LATENCY SIMULATOR
+  // ==========================================
+  function initLiveMetrics() {
+    const latencyEl = document.getElementById("dynamic-latency");
+    if (!latencyEl) return;
+
+    setInterval(() => {
+      // Natural jitter between 11ms and 18ms
+      const val = 12 + Math.floor(Math.random() * 7);
+      latencyEl.textContent = `${val}ms`;
+    }, 2800);
+  }
+
+  // Boot on DOM ready
+  document.addEventListener("DOMContentLoaded", () => {
+    typeWriter();
+    init3DTiltAndSpotlight();
+    initLiveMetrics();
+    console.log("Samuel David Gélvez Rodríguez — Interactive Portfolio Kernel Active");
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="195" viewBox="0 0 450 195" fill="none">
+  <rect width="450" height="195" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+  <g transform="translate(25, 22)">
+    <text x="0" y="15" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="16" font-weight="700" fill="#38BDF8">
+      💻 Distribución de Tecnologías
+    </text>
+    
+    <!-- Java -->
+    <g transform="translate(0, 36)">
+      <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Java (Spring Boot / POO)</text>
+      <text x="400" y="12" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#ED8B00">54%</text>
+      <rect x="0" y="18" width="400" height="6" rx="3" fill="#21262D"/>
+      <rect x="0" y="18" width="216" height="6" rx="3" fill="#ED8B00"/>
+    </g>
+
+    <!-- Python -->
+    <g transform="translate(0, 68)">
+      <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Python (FastAPI / IA / Pydantic)</text>
+      <text x="400" y="12" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#38BDF8">24%</text>
+      <rect x="0" y="18" width="400" height="6" rx="3" fill="#21262D"/>
+      <rect x="0" y="18" width="96" height="6" rx="3" fill="#38BDF8"/>
+    </g>
+
+    <!-- SQL & Persistencia -->
+    <g transform="translate(0, 100)">
+      <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">SQL &amp; Relacional (PostgreSQL / MySQL)</text>
+      <text x="400" y="12" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#316192">14%</text>
+      <rect x="0" y="18" width="400" height="6" rx="3" fill="#21262D"/>
+      <rect x="0" y="18" width="56" height="6" rx="3" fill="#316192"/>
+    </g>
+
+    <!-- Docker & DevOps -->
+    <g transform="translate(0, 132)">
+      <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600" fill="#E2E8F0">Docker, Linux &amp; Automatización</text>
+      <text x="400" y="12" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#10B981">8%</text>
+      <rect x="0" y="18" width="400" height="6" rx="3" fill="#21262D"/>
+      <rect x="0" y="18" width="32" height="6" rx="3" fill="#10B981"/>
+    </g>
+  </g>
+</svg>
