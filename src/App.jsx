@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ThemeProvider } from './context/ThemeContext';
 import { LanguageProvider } from './context/LanguageContext';
 import { Navbar } from './components/Navbar';
@@ -10,18 +10,11 @@ import { Projects } from './components/Projects';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { AmbientBackground } from './components/AmbientBackground';
-import { CosmicIntro } from './components/CosmicIntro';
 
 export const App = () => {
-  const [introFinished, setIntroFinished] = useState(false);
-
   return (
     <ThemeProvider>
       <LanguageProvider>
-        {!introFinished && (
-          <CosmicIntro onComplete={() => setIntroFinished(true)} />
-        )}
-
         <div className="relative min-h-screen bg-slate-900/95 dark:bg-[#06080e] text-gray-900 dark:text-gray-100 transition-colors duration-500 antialiased selection:bg-blue-500 selection:text-white">
           {/* Skip link for keyboard accessibility */}
           <a
