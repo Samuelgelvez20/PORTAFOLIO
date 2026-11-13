@@ -14,6 +14,31 @@ html, body {
   scroll-padding-top: 4.5rem;
 }
 
+/* Ocultar absolutamente el cursor estándar del sistema en todos los elementos y estados */
+html,
+body,
+#root,
+*,
+*::before,
+*::after {
+  cursor: none !important;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+label,
+summary,
+[role="button"],
+[tabindex],
+.cursor-pointer,
+.cursor-default,
+.cursor-text {
+  cursor: none !important;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 7px;
@@ -302,7 +327,103 @@ html, body {
   box-shadow: 0 0 14px 3px #ffffff, 0 0 28px 6px rgba(56, 189, 248, 0.95);
 }
 
+/* ==========================================================================
+   REACT BITS: SHINY TEXT (100% GPU COMPOSITED)
+   ========================================================================== */
+@keyframes shinyShimmerGpu {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
+
+.animate-shiny-shimmer-gpu {
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.75) 50%, transparent 100%);
+  will-change: transform;
+  animation: shinyShimmerGpu 3.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   SATURN PLANETARY RINGS (Anillos de Saturno para el Avatar)
+   ========================================================================== */
+
+@keyframes saturnRingSpin {
+  0% {
+    transform: translate(-50%, -50%) rotateX(72deg) rotateY(-14deg) rotateZ(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateX(72deg) rotateY(-14deg) rotateZ(360deg);
+  }
+}
+
+@keyframes saturnRingSpinReverse {
+  0% {
+    transform: translate(-50%, -50%) rotateX(66deg) rotateY(18deg) rotateZ(360deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotateX(66deg) rotateY(18deg) rotateZ(0deg);
+  }
+}
+
+@keyframes saturnGlowPulse {
+  0%, 100% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.saturn-ring-outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 156%;
+  height: 156%;
+  border-radius: 50%;
+  border: 1.5px solid rgba(56, 189, 248, 0.55);
+  background: radial-gradient(circle, transparent 58%, rgba(56, 189, 248, 0.08) 65%, rgba(168, 85, 247, 0.18) 78%, rgba(56, 189, 248, 0.35) 94%, transparent 100%);
+  filter: drop-shadow(0 0 12px rgba(56, 189, 248, 0.6)) drop-shadow(0 0 22px rgba(168, 85, 247, 0.35));
+  animation: saturnRingSpin 22s linear infinite, saturnGlowPulse 5s ease-in-out infinite;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.saturn-ring-inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 132%;
+  height: 132%;
+  border-radius: 50%;
+  border: 1px dashed rgba(192, 132, 252, 0.5);
+  animation: saturnRingSpinReverse 16s linear infinite;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.saturn-ring-dust {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 172%;
+  height: 172%;
+  border-radius: 50%;
+  border: 1px dotted rgba(56, 189, 248, 0.3);
+  animation: saturnRingSpin 36s linear infinite;
+  pointer-events: none;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  .saturn-ring-outer,
+  .saturn-ring-inner,
+  .saturn-ring-dust,
   .anim-hero-1,
   .anim-hero-2,
   .anim-hero-3,

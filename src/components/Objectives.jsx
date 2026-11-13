@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { useScrollReveal } from '../hooks/useScrollReveal';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Objectives = () => {
   const { lang, t } = useLanguage();
-  const [sectionRef, isVisible] = useScrollReveal();
+  const sectionRef = useRef(null);
 
   const stages = [
     {
@@ -35,19 +39,48 @@ export const Objectives = () => {
 
   const phaseLabel = lang === 'en' ? 'PHASE' : 'FASE';
 
+  useGSAP(
+    () => {
+      // Cabecera
+      gsap.from('.gsap-objectives-header', {
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 88%',
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.45,
+        ease: 'power2.out',
+      });
+
+      // Tarjetas de objetivos escalonadas de forma ágil y sincronizada
+      gsap.from('.gsap-objectives-card', {
+        scrollTrigger: {
+          trigger: '.gsap-objectives-grid',
+          start: 'top 88%',
+        },
+        y: 25,
+        scale: 0.98,
+        opacity: 0,
+        duration: 0.45,
+        stagger: 0.08,
+        ease: 'power2.out',
+      });
+    },
+    { scope: sectionRef }
+  );
+
   return (
     <section
       id="objectives"
       ref={sectionRef}
-      className={`py-16 md:py-24 border-t border-white/10 reveal-init ${
-        isVisible ? 'reveal-active' : ''
-      }`}
+      className="py-16 md:py-24 border-t border-white/10 relative"
     >
       <div className="w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-bold tracking-widest uppercase text-blue-400">
+        <div className="gsap-objectives-header text-center max-w-2xl mx-auto mb-14">
+          <span className="text-xs font-bold tracking-widest uppercase text-blue-400 font-mono">
             {t.objectives.tagline}
           </span>
           <h2 className="mt-2 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
@@ -59,11 +92,11 @@ export const Objectives = () => {
         </div>
 
         {/* 3 Columns Timeline Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="gsap-objectives-grid grid grid-cols-1 md:grid-cols-3 gap-8">
           {stages.map((stage) => (
             <div
               key={stage.num}
-              className="relative p-7 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between"
+              className="gsap-objectives-card relative p-7 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between transition-all duration-300 hover:-translate-y-1"
             >
               <div>
                 <div className="flex items-center justify-between mb-6">
@@ -96,3 +129,5 @@ export const Objectives = () => {
     </section>
   );
 };
+
+export default Objectives;

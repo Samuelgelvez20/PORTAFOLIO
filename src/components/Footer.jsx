@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { ArrowUp } from 'lucide-react';
+import { ArrowUp } from './icons';
 
 export const Footer = () => {
   const { t, personal } = useLanguage();
@@ -66,4 +66,6 @@ export const Footer = () => {
     </footer>
   );
 };
+
+export default Footer;
 

@@ -1,13 +1,74 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useLanguage } from '../context/LanguageContext';
-import { Download, Copy, Check, ArrowUpRight } from 'lucide-react';
+import { Download, Copy, Check, ArrowUpRight } from './icons';
 import { TechIcon } from './TechIcon';
-import { useScrollReveal } from '../hooks/useScrollReveal';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useGSAP } from '@gsap/react';
+import { SpotlightCard } from './reactbits/SpotlightCard';
+import { Magnet } from './reactbits/Magnet';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const Contact = () => {
   const { lang, t, personal } = useLanguage();
   const [copied, setCopied] = useState(false);
-  const [sectionRef, isVisible] = useScrollReveal();
+  const containerRef = useRef(null);
+
+  useGSAP(
+    () => {
+      // Entrada del encabezado
+      gsap.from('.gsap-contact-header', {
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: 'top 88%',
+          toggleActions: 'play none none none',
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.45,
+        ease: 'power2.out',
+      });
+
+      // Stagger ágil de las tarjetas de contacto
+      gsap.fromTo('.gsap-contact-card', 
+        { y: 25, opacity: 0, scale: 0.98 },
+        {
+          scrollTrigger: {
+            trigger: '.gsap-contact-grid',
+            start: 'top 88%',
+            toggleActions: 'play none none none',
+          },
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.45,
+          stagger: 0.07,
+          ease: 'power2.out',
+          clearProps: 'opacity,transform',
+        }
+      );
+
+      // Botón principal de CV
+      gsap.fromTo('.gsap-contact-cta', 
+        { y: 20, opacity: 0, scale: 0.96 },
+        {
+          scrollTrigger: {
+            trigger: '.gsap-contact-cta',
+            start: 'top 92%',
+            toggleActions: 'play none none none',
+          },
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.4,
+          ease: 'power2.out',
+          clearProps: 'opacity,transform',
+        }
+      );
+    },
+    { scope: containerRef }
+  );
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(personal.email).then(() => {
@@ -24,15 +85,13 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      ref={sectionRef}
-      className={`py-16 md:py-24 border-t border-white/10 reveal-init ${
-        isVisible ? 'reveal-active' : ''
-      }`}
+      ref={containerRef}
+      className="py-16 md:py-24 border-t border-white/10"
     >
       <div className="w-full max-w-[1560px] mx-auto px-4 sm:px-6 lg:px-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-14">
+        <div className="gsap-contact-header text-center max-w-2xl mx-auto mb-14">
           <span className="text-xs font-bold tracking-widest uppercase text-blue-400">
             {t.contact.tagline}
           </span>
@@ -45,10 +104,14 @@ export const Contact = () => {
         </div>
 
         {/* Contact Methods Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div className="gsap-contact-grid grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
           
           {/* Card 1: Email */}
-          <div className="p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
+          <SpotlightCard
+            spotlightColor="rgba(59, 130, 246, 0.22)"
+            borderSpotlightColor="rgba(96, 165, 250, 0.6)"
+            className="gsap-contact-card p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between"
+          >
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-blue-400">
@@ -91,10 +154,14 @@ export const Contact = () => {
                 )}
               </button>
             </div>
-          </div>
+          </SpotlightCard>
 
-          {/* Card 3: LinkedIn */}
-          <div className="p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
+          {/* Card 2: LinkedIn */}
+          <SpotlightCard
+            spotlightColor="rgba(6, 182, 212, 0.22)"
+            borderSpotlightColor="rgba(34, 211, 238, 0.6)"
+            className="gsap-contact-card p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between"
+          >
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-cyan-400">
@@ -116,16 +183,21 @@ export const Contact = () => {
                 href={personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${t.contact.viewProfile} LinkedIn - Samuel David Gelvez`}
                 className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-gray-200 bg-white/5 hover:bg-white/10 border border-white/10 transition-all hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{t.contact.viewProfile}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
-          </div>
+          </SpotlightCard>
 
-          {/* Card 4: GitHub */}
-          <div className="p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between">
+          {/* Card 3: GitHub */}
+          <SpotlightCard
+            spotlightColor="rgba(168, 85, 247, 0.22)"
+            borderSpotlightColor="rgba(192, 132, 252, 0.6)"
+            className="gsap-contact-card p-5 sm:p-6 rounded-3xl bg-slate-900/40 backdrop-blur-xl border border-white/10 hover:border-white/20 shadow-xl shadow-black/40 card-glow flex flex-col justify-between"
+          >
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-purple-400">
@@ -147,29 +219,34 @@ export const Contact = () => {
                 href={personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`${t.contact.viewProfile} GitHub - Samuel David Gelvez`}
                 className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl text-xs font-semibold text-gray-200 bg-white/5 hover:bg-white/10 border border-white/10 transition-all hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>{t.contact.viewProfile}</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
-          </div>
+          </SpotlightCard>
 
         </div>
 
         {/* Download CV CTA */}
-        <div className="text-center px-4">
-          <a
-            href={currentCv}
-            download
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/35 transition-all hover:-translate-y-0.5 active:translate-y-0"
-          >
-            <Download className="w-4 h-4" />
-            <span>{t.contact.downloadCv} ({lang.toUpperCase()})</span>
-          </a>
+        <div className="gsap-contact-cta text-center px-4 flex justify-center">
+          <Magnet strength={0.35}>
+            <a
+              href={currentCv}
+              download
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg shadow-indigo-500/20 hover:shadow-indigo-500/35 transition-all hover:-translate-y-0.5 active:translate-y-0"
+            >
+              <Download className="w-4 h-4" />
+              <span>{t.contact.downloadCv} ({lang.toUpperCase()})</span>
+            </a>
+          </Magnet>
         </div>
 
       </div>
     </section>
   );
 };
+
+export default Contact;
