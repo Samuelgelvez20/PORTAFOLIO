@@ -10,8 +10,8 @@ export const portfolioData = {
     github: "https://github.com/Samuelgelvez20",
     linkedin: "https://www.linkedin.com/in/samuelgelvezdev/",
     avatar: "images/profile/perfil_img.webp",
-    cvEs: "cv/CV_SAMUELGELVEZ.pdf",
-    cvEn: "cv/CV_SAMUELGELVEZ_ENGLISH.pdf",
+    cvEs: "cv/CV_Samuel Gelvez_Desarrollador Backend.pdf",
+    cvEn: "cv/CV_Samuel Gelvez_Junior Backend Developer.pdf",
     cvPendingUpdate: false,
   },
 
